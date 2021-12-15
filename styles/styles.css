@@ -1,0 +1,220 @@
+#danger{
+    background-color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------ViewStations-------------------------------------*/
+/*---------------------------------------------------------------------------*/
+.stations_list {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.stations_list td, .stations_list th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.stations_list tr:nth-child(even){background-color: #f2f2f2;}
+
+.stations_list tr:hover {background-color: #ddd;}
+
+.stations_list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #35008e;
+    color: white;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------Search-------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+
+#myInput {
+    background-image: url('/imgs/search.svg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------ViewStationEdit----------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+legend {
+    font-size: xx-large;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4a248d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #35008e;
+}
+
+.input_button {
+    width: 50%;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+button {
+    align-self: center;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+  
+img {
+    padding-top: 2px;
+}
+
+label {
+    width: 100px;
+}
+
+
+.same_line {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+#new_station {
+    height: 100%;
+    width: 100%;
+}
+
+#back_button {
+    font-size: large;
+    display: inline;
+    height: auto;
+    width: 8%;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+#back_button>img{
+    padding-right: 20px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*-----------------------ViewAddCRCC--------ViewModifyCRCC-------------------*/
+/*---------------------------------------------------------------------------*/
+
+.overlay__background {
+    position:fixed;
+    top : 0;
+    width : 100%;
+    height : 100%;
+    margin : -1;
+    opacity: 0.77;
+    background-color: white;
+    z-index: 9000;
+}
+
+.modal {
+    position:fixed;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    z-index: 9009;
+    opacity: 1;
+    background-color: transparent;
+}  
+
+
+.modal_form {
+    background-color: transparent;
+    position: absolute;
+    top : 20%;
+    left : 20%;
+    right : 20%;
+    height: auto;
+    width: auto;
+}
+
+.modal__solid{
+    border-radius: 16px;
+    border : 1px solid  #EEE;
+    -webkit-box-shadow: 6px 4px 14px 4px rgba(0,0,0,0.18); 
+    box-shadow: 6px 4px 14px 4px rgba(0,0,0,0.18);
+    opacity: 1;
+}
+.modal__solid > fieldset {
+    margin-top: -10px;
+}
+
+.modal__solid > fieldset > legend {
+    margin-top : -2px;
+}
+
+.modal__content {
+    padding: 32px;
+}
+
+.modal__content label {
+  margin-left : 4px;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*--------------------------ViewAddSubmitConfirmstation----------------------*/
+/*---------------------------------------------------------------------------*/
+
+.stationRecap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stationRecap > h2{
+    text-decoration: underline;
+    margin-bottom: auto;
+}

@@ -1,0 +1,127 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body { overflow : hidden; }
+
+.application {
+    position : absolute;
+    /* border : 2px solid red; */
+    background : #505050;
+    top : 0px;
+    bottom : 0px;
+    left : 0px;
+    right:0px;
+}
+
+.Error { color : white; }
+
+.white  { background : rgba(250, 250, 250,  0.75); color :rgba(50, 50, 50,  1);}
+.silver  { background : rgba(150, 150, 150,  0.75); color :rgba(50, 50, 50,  1);}
+.gray   { background : rgba(100, 100, 100,  0.75); color :rgba(50, 50, 50,  1);}
+.blue   { background : rgba(150, 150, 250,  0.75); color :rgba(5, 5, 5,  1);}
+.yellow { background : rgba(250, 250, 150,  0.75); color :rgba(5, 5, 5,  1);}
+.red    { background : rgba(250, 150, 150,  0.75); color :rgba(5, 5, 5,  1);}
+.green  { background : rgba(150, 250, 150,  0.75); color :rgba(5, 5, 5,  1);}
+.cyan   { background : rgba(150, 250, 250,  0.75); color :rgba(5, 5, 5,  1);}
+
+.blue-1    { background-color: rgba(100,100,150,0.33); }
+.yellow-1  { background-color: rgba(250, 250,150,0.33); }
+.red-1  { background-color: rgba(250, 150,150,0.33); }
+.green-1    { background-color: rgba(80,150,80,0.5); }
+
+/* Buttons Report personlize */
+.button {
+    margin: 0 10px 0 0;
+    border: 2px solid rgba(230, 230, 128, 0.3);
+    border-radius: 12px;
+    font-size : 18px;
+    text-transform: lowercase;
+    cursor: pointer;
+    box-shadow: 5px 3px 5px rgba(53, 51, 51, 0.33);
+    outline: none;
+    height : 38px;
+    width : 128px;
+}
+
+.button::first-letter { text-transform: uppercase; }
+
+.button:focus {
+  border: none;
+  outline: none;
+}
+
+.medium {
+  height : 26px !important;
+  width : 64px  !important;
+  font-size : 14px !important;
+}
+
+.small {
+  font-size : 12px !important;
+  height : 18px !important;
+  width : 48px  !important;
+}
+
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.5s;
+  }
+  
+ .ripple:hover {
+     background:   rgba(150, 150, 150, 0.75) radial-gradient(circle, transparent 1%,  rgba(5, 5, 5, 0.1) 1%) center/12000%;
+     color :rgba(250, 250, 250,  1);
+  } 
+
+.ripple:active {
+    background-color: rgba(127, 128, 129, 0.50); 
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+ .ripple:focus {
+    border: none;
+    outline: none;
+}
+
+
+/*** ScrollBar Custom ***/
+
+.noScrollBar {
+  overflow: hidden !important;
+}
+
+
+.scrollbar::-webkit-scrollbar
+{
+    border-radius: 2px;
+	  width: 0.76rem;
+	  background-color:  rgba(20, 15, 15, 0.33);
+}
+
+
+.scrollbar::-webkit-scrollbar-track
+{
+	/* border-radius: 0.85rem; */
+  background-color:  rgba(175, 170, 180, 0.77);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 0.64rem;
+  background-color:  rgba(205, 200, 250, 0.77);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+.force-overflow
+{
+  min-height: 850px;
+  border : 1px solid red;
+}
+
+

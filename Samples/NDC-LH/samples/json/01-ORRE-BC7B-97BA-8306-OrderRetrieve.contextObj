@@ -1,0 +1,4452 @@
+{
+ "Version": "ContextObj-0.1.0",
+ "Context": {
+  "ComponentName": "OrderRetrieve",
+  "ClassName": "OrderRetrieve",
+  "fkFlow": "FL-8a56-bb6d-9765",
+  "IndexComponent": 1,
+  "libpath": "NDC-LH",
+  "RQFilename": "OrderRetrieveRQ",
+  "RSFilename": "OrderViewRS",
+  "XMLQuery": "<SOAP-ENV:Envelope \r\n    xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" \r\n    xmlns:ns1=\"http://farelogix.com/ns1\" \r\n    xmlns:t=\"http://farelogix.com/flx/t\" \r\n>\r\n<SOAP-ENV:Header>\r\n      <t:TransactionControl>\r\n        <tc>\r\n            <app version=\"7.6.0\" language=\"fr-FR\">SOAP</app>\r\n            <iden u=\"ftherets2020\" p=\"aH2XhW98AFhtgHg4v\" pseudocity=\"ASRR\" agt=\"9LJG2020\" agtpwd=\"K6e2DjSQPvph\" agy=\"00110795\"/>\r\n            <agent user=\"xmlscn001\"/>\r\n            <trace>xmluser01</trace>\r\n            <script engine=\"FLXDM\" name=\"voyagexpertlhg-dispatch.flxdm\"/>\r\n        </tc>\r\n   </t:TransactionControl>\r\n</SOAP-ENV:Header>\r\n<SOAP-ENV:Body>\r\n    <ns1:XXTransaction>\r\n        <REQ>\r\n            <OrderRetrieveRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"17.2\" TransactionIdentifier=\"ORRE-BC7B-97BA-8306\">\r\n    <Document id=\"document\"/>\r\n    <Party>\r\n    <Sender> \r\n        <TravelAgencySender>\r\n            <PseudoCity>ASRR</PseudoCity>\r\n            <AgencyID>00110795</AgencyID>\r\n        </TravelAgencySender>\r\n    </Sender>\r\n</Party>\r\n\t\n<Query>\n    \n    <Filters>\n        \n    <OrderID Owner='LH'> LH22094CFF0A3 </OrderID>\n\n      \n    </Filters>\n\n</Query>\n\r\n </OrderRetrieveRQ>\r\n\r\n \r\n        </REQ>\r\n    </ns1:XXTransaction>\r\n</SOAP-ENV:Body>\r\n\r\n</SOAP-ENV:Envelope>",
+  "XMLFrame": {
+   "AirShopping": {
+    "AirShoppingRQ": " <AirShoppingRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n    {%CoreQuery%}\r\n    {%Preference%}\r\n    {%DataLists%}\r\n </AirShoppingRQ>",
+    "FlxTransaction": "{#AirShoppingRQ#}\r\n"
+   },
+   "OfferPrice": {
+    "FlxTransaction": "{#OfferPriceRQ#}\r\n",
+    "OfferPriceRQ": " <OfferPriceRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n    {%Query%}\r\n\t{%Preference%}\r\n    {%DataLists%}\r\n </OfferPriceRQ>"
+   },
+   "OrderCancel": {
+    "FlxTransaction": "{#OrderCancelRQ#}\r\n",
+    "OrderCancelRQ": " <OrderCancelRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n    {%Query%}\r\n </OrderCancelRQ>"
+   },
+   "OrderChange": {
+    "FlxTransaction": "{#OrderChangeRQ#}\r\n",
+    "OrderChangeRQ": " <OrderChangeRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    {%AugmentationPoint%}\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n    {%Query%}\r\n    {%DataLists%}\r\n </OrderChangeRQ>"
+   },
+   "OrderCreate": {
+    "CreateOrderRQ": " <OrderCreateRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    {%AugmentationPoint%}\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n    {%Query%}\r\n    {%DataLists%}\r\n    {%Metadata%}\r\n </OrderCreateRQ>",
+    "FlxTransaction": "{#CreateOrderRQ#}\r\n"
+   },
+   "OrderList": {
+    "FlxTransaction": "{#OrderListRQ#}\r\n",
+    "OrderListRQ": " <OrderListRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n\t{%Query%}\r\n </OrderListRQ>\r\n\r\n "
+   },
+   "OrderReshop": {
+    "FlxTransaction": "{#OrderReshopRQ#}\r\n",
+    "OrderReshopRQ": " <OrderReshopRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n    {%Query%}\r\n </OrderReshopRQ>"
+   },
+   "OrderRetrieve": {
+    "FlxTransaction": "{#OrderRetrieveRQ#}\r\n",
+    "OrderRetrieveRQ": " <OrderRetrieveRQ PrimaryLangID=\"FR\" AltLangID=\"EN\" Version=\"{%Version%}\" TransactionIdentifier=\"{%TransactionIdentifier%}\">\r\n    <Document id=\"document\"/>\r\n    {%Party%}\r\n\t{%Query%}\r\n </OrderRetrieveRQ>\r\n\r\n "
+   },
+   "body": "<SOAP-ENV:Body>\r\n    <ns1:XXTransaction>\r\n        <REQ>\r\n           {%FlxTransaction%}\r\n        </REQ>\r\n    </ns1:XXTransaction>\r\n</SOAP-ENV:Body>\r\n",
+   "envelope": "<SOAP-ENV:Envelope \r\n    xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" \r\n    xmlns:ns1=\"http://farelogix.com/ns1\" \r\n    xmlns:t=\"http://farelogix.com/flx/t\" \r\n>\r\n{%Header%}\r\n{%Body%}\r\n</SOAP-ENV:Envelope>",
+   "header": "<SOAP-ENV:Header>\r\n      <t:TransactionControl>\r\n        <tc>\r\n            <app version=\"{%TransactionControl.tc.app.version%}\" language=\"{%TransactionControl.tc.app.language%}\">{%TransactionControl.tc.app.string%}</app>\r\n            <iden u=\"{%TransactionControl.tc.iden.u%}\" p=\"{%TransactionControl.tc.iden.p%}\" pseudocity=\"{%TransactionControl.tc.iden.pseudocity%}\" agt=\"{%TransactionControl.tc.iden.agt%}\" agtpwd=\"{%TransactionControl.tc.iden.agtpwd%}\" agy=\"{%TransactionControl.tc.iden.agy%}\"/>\r\n            <agent user=\"{%TransactionControl.tc.agent.user%}\"/>\r\n            <trace>{%TransactionControl.tc.trace.string%}</trace>\r\n            <script engine=\"{%TransactionControl.tc.script.engine%}\" name=\"{%TransactionControl.tc.script.name%}\"/>\r\n        </tc>\r\n   </t:TransactionControl>\r\n</SOAP-ENV:Header>"
+  },
+  "frags": {
+   "Party": "<Party>\r\n    <Sender> \r\n        <TravelAgencySender>\r\n            <PseudoCity>{%PseudoCity%}</PseudoCity>\r\n            <AgencyID>{%AgencyID%}</AgencyID>\r\n        </TravelAgencySender>\r\n    </Sender>\r\n</Party>"
+  },
+  "TransactionControl": {
+   "tc": {
+    "app": {
+     "version": "7.6.0",
+     "language": "fr-FR",
+     "string": "SOAP"
+    },
+    "iden": {
+     "u": "ftherets2020",
+     "p": "aH2XhW98AFhtgHg4v",
+     "pseudocity": "ASRR",
+     "agt": "9LJG2020",
+     "agtpwd": "K6e2DjSQPvph",
+     "agtrole": "Ticketing Agent",
+     "agy": "00110795"
+    },
+    "agent": {
+     "user": "xmlscn001"
+    },
+    "trace": {
+     "string": "xmluser01"
+    },
+    "script": {
+     "engine": "FLXDM",
+     "name": "voyagexpertlhg-dispatch.flxdm"
+    }
+   }
+  },
+  "TransactionIdentifier": "ORRE-BC7B-97BA-8306",
+  "Sections": {
+   "Version": "17.2",
+   "Party": "<Party>\r\n    <Sender> \r\n        <TravelAgencySender>\r\n            <PseudoCity>ASRR</PseudoCity>\r\n            <AgencyID>00110795</AgencyID>\r\n        </TravelAgencySender>\r\n    </Sender>\r\n</Party>",
+   "TransactionIdentifier": "ORRE-BC7B-97BA-8306",
+   "Query": "\n<Query>\n    \n    <Filters>\n        \n    <OrderID Owner='LH'> LH22094CFF0A3 </OrderID>\n\n      \n    </Filters>\n\n</Query>\n"
+  },
+  "ErrorMessage": "",
+  "DataIn": {
+   "OrderID": "LH22094CFF0A3",
+   "Owner": "LH",
+   "Passengers": [],
+   "Orders": [
+    {
+     "OrderID": "LH22094CFF0A3",
+     "Owner": "LH",
+     "Agency": [
+      {
+       "AgencyID": "ASRR",
+       "Name": "9LJG2020",
+       "IATA_Number": "00110795"
+      }
+     ],
+     "Departure": [
+      {
+       "AirportCode": "CDG",
+       "Date": "2021-07-25"
+      }
+     ],
+     "Passengers": [
+      "DAVE DOE"
+     ],
+     "StatusCode": [
+      "702"
+     ],
+     "StatusResume": [
+      "Error at End of Transaction"
+     ]
+    }
+   ]
+  },
+  "Cache": {
+   "JSONQuery": {},
+   "XMLQuery": "",
+   "XMLResponse": "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:xsd=\"http://www.w3.org/1999/XMLSchema/\" xmlns:xsi=\"http://www.w3.org/1999/XMLSchema/instance/\"><SOAP-ENV:Header><t:Transaction xmlns:t=\"xxs\"><tc><pid>FLX DMServer TC1 (8800/3070) STG 0a19</pid><tid>19219A80-A3C1F560</tid><dt>2021-07-06T07:42:31</dt></tc></t:Transaction></SOAP-ENV:Header><SOAP-ENV:Body><ns1:XXTransactionResponse xmlns:ns1=\"xxs\"><RSP><OrderViewRS Version=\"17.2\" TransactionIdentifier=\"ORRE-BC7B-97BA-8306\">\r\n\t<Document></Document>\r\n\t<Party>\r\n\t\t<Sender>\r\n\t\t\t<AggregatorSender>\r\n\t\t\t\t<AggregatorID>F1</AggregatorID>\r\n\t\t\t</AggregatorSender>\r\n\t\t</Sender>\r\n\t\t<Recipient>\r\n\t\t\t<TravelAgencyRecipient>\r\n\t\t\t\t<PseudoCity Owner=\"F1\">ASRR</PseudoCity>\r\n\t\t\t\t<AgencyID>ASRR</AgencyID>\r\n\t\t\t\t<AgentUser>\r\n\t\t\t\t\t<Name>00110795</Name>\r\n\t\t\t\t\t<PseudoCity Owner=\"F1\">ASRR</PseudoCity>\r\n\t\t\t\t\t<IATA_Number>00110795</IATA_Number>\r\n\t\t\t\t\t<AgentUserID>9LJG2020</AgentUserID>\r\n\t\t\t\t</AgentUser>\r\n\t\t\t</TravelAgencyRecipient>\r\n\t\t</Recipient>\r\n\t</Party>\r\n\t<Success></Success>\r\n\t<Warnings>\r\n\t\t<Warning Code=\"005\" Type=\"SSR\" ShortText=\"RFUTWU | SSR change - 2021-07-06T11:37:20, LH, LHC100000204445.INV ACC NMBR.\">Special services FQTV - NO</Warning>\r\n\t\t<Warning Code=\"005\" Type=\"SSR\" ShortText=\"RFUTWU | SSR change - 2021-07-06T11:37:30, LH, PLS ADV TKT NBR BY 09JUL21/1137Z OR LH OPTG/MKTG FLTS WILL BE CANX / APPLIC FARE RULE APPLIES IF IT DEMANDS EARLIER TKTG\">Special services OTHS</Warning>\r\n\t</Warnings>\r\n\t<Response>\r\n\t\t<Order OrderID=\"LH22094CFF0A3\" Owner=\"LH\">\r\n\t\t\t<BookingReferences>\r\n\t\t\t\t<BookingReference>\r\n\t\t\t\t\t<ID>RFUTWU</ID>\r\n\t\t\t\t\t<OtherID>F1</OtherID>\r\n\t\t\t\t</BookingReference>\r\n\t\t\t\t<BookingReference>\r\n\t\t\t\t\t<ID>UKO9CA</ID>\r\n\t\t\t\t\t<AirlineID Name=\"Lufthansa\">LH</AirlineID>\r\n\t\t\t\t</BookingReference>\r\n\t\t\t</BookingReferences>\r\n\t\t\t<TotalOrderPrice>\r\n\t\t\t\t<DetailCurrencyPrice>\r\n\t\t\t\t\t<Total Code=\"EUR\">16749</Total>\r\n\t\t\t\t</DetailCurrencyPrice>\r\n\t\t\t</TotalOrderPrice>\r\n\t\t\t<OrderItems>\r\n\t\t\t\t<OrderItem OrderItemID=\"PoIPC98FD0C4-9C2F-4511-BCE7-1-1\" Timestamp=\"2021-07-06T07:37:00\">\r\n\t\t\t\t\t<PriceDetail>\r\n\t\t\t\t\t\t<TotalAmount>\r\n\t\t\t\t\t\t\t<DetailCurrencyPrice>\r\n\t\t\t\t\t\t\t\t<Total Code=\"EUR\">16749</Total>\r\n\t\t\t\t\t\t\t</DetailCurrencyPrice>\r\n\t\t\t\t\t\t</TotalAmount>\r\n\t\t\t\t\t\t<BaseAmount Code=\"EUR\">100</BaseAmount>\r\n\t\t\t\t\t\t<Taxes>\r\n\t\t\t\t\t\t\t<Total Code=\"EUR\">16649</Total>\r\n\t\t\t\t\t\t</Taxes>\r\n\t\t\t\t\t</PriceDetail>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV1-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-BLG</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV2-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-BLG</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV3-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-MNB</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV4-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-MNB</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV5-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-SEA</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV6-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-SEA</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV7-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-MAG</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV8-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-MAG</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV9-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-0LW</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV10-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-0LW</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV11-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-050</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV12-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-050</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV13-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">A-OC-057</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"INCLUDEDSRV14-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">A-OC-057</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"BAGGAGESRV1-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">BASRVE61FF944</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"BAGGAGESRV2-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">BASRVE61FF944</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"BAGGAGESRV3-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S3\">BASRV78EBAAF4-CO</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"BAGGAGESRV4-T1\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<ServiceDefinitionRef SegmentRef=\"S2\">BASRV374CBA69-CO</ServiceDefinitionRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"SRV1-T1-S2\" ServiceStatus=\"HK\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<SegmentRef>S2</SegmentRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<Service ServiceID=\"SRV1-T1-S3\" ServiceStatus=\"HK\">\r\n\t\t\t\t\t\t<PassengerRef>T1</PassengerRef>\r\n\t\t\t\t\t\t<SegmentRef>S3</SegmentRef>\r\n\t\t\t\t\t</Service>\r\n\t\t\t\t\t<TimeLimits>\r\n\t\t\t\t\t\t<PaymentTimeLimit Timestamp=\"2021-07-09T13:37:00\"></PaymentTimeLimit>\r\n\t\t\t\t\t\t<TicketingTimeLimits Timestamp=\"2021-07-09T13:37:00\"></TicketingTimeLimits>\r\n\t\t\t\t\t</TimeLimits>\r\n\t\t\t\t\t<FareDetail>\r\n\t\t\t\t\t\t<FareIndicatorCode>4</FareIndicatorCode>\r\n\t\t\t\t\t\t<PassengerRefs>T1</PassengerRefs>\r\n\t\t\t\t\t\t<Price>\r\n\t\t\t\t\t\t\t<TotalAmount>\r\n\t\t\t\t\t\t\t\t<DetailCurrencyPrice>\r\n\t\t\t\t\t\t\t\t\t<Total Code=\"EUR\">16749</Total>\r\n\t\t\t\t\t\t\t\t</DetailCurrencyPrice>\r\n\t\t\t\t\t\t\t</TotalAmount>\r\n\t\t\t\t\t\t\t<BaseAmount Code=\"EUR\">100</BaseAmount>\r\n\t\t\t\t\t\t\t<Taxes>\r\n\t\t\t\t\t\t\t\t<Total Code=\"EUR\">16649</Total>\r\n\t\t\t\t\t\t\t\t<Breakdown>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">4800</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>YQ</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t\t<CurrCode NumberOfDecimals=\"2\">EUR</CurrCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<AirportAmount>4800</AirportAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<AirportCode>CDG</AirportCode>\r\n\t\t\t\t\t\t\t\t\t\t</CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">4800</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>YQI LH CARRIER IMPOSED MISC FEE</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">4800</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>YQ</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t\t<CurrCode NumberOfDecimals=\"2\">EUR</CurrCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<AirportAmount>4800</AirportAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<AirportCode>FRA</AirportCode>\r\n\t\t\t\t\t\t\t\t\t\t</CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">4800</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>YQI LH CARRIER IMPOSED MISC FEE</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">2183</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<Nation>DE</Nation>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>RD</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">2183</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>PASSENGER SERVICE CHARGE DOMESTIC DEPARTURE</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">466</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>FR</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">466</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>CIVIL AVIATION TAX DOMESTIC AND INTERNATIONAL</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">1170</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>FR</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">1170</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>AIRPORT TAX DOMESTIC AND INTERNATIONAL</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">1127</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>IZ</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">1127</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>AIR PASSENGER SOLIDARITY TAX</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">900</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>O4</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">900</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>AIR PASSENGER SOLIDARITY TAX SURPLUS</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t<Tax RefundInd=\"true\">\r\n\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">1203</Amount>\r\n\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t<TaxCode>QX</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">1203</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t<Description>PASSENGER SERVICE CHARGE INTERNATIONAL</Description>\r\n\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t</Breakdown>\r\n\t\t\t\t\t\t\t</Taxes>\r\n\t\t\t\t\t\t</Price>\r\n\t\t\t\t\t\t<FareComponent>\r\n\t\t\t\t\t\t\t<Price>\r\n\t\t\t\t\t\t\t\t<TotalAmount>\r\n\t\t\t\t\t\t\t\t\t<DetailCurrencyPrice>\r\n\t\t\t\t\t\t\t\t\t\t<Total Code=\"EUR\">16749</Total>\r\n\t\t\t\t\t\t\t\t\t</DetailCurrencyPrice>\r\n\t\t\t\t\t\t\t\t</TotalAmount>\r\n\t\t\t\t\t\t\t\t<BaseAmount Code=\"EUR\">100</BaseAmount>\r\n\t\t\t\t\t\t\t\t<Taxes>\r\n\t\t\t\t\t\t\t\t\t<Total Code=\"EUR\">16649</Total>\r\n\t\t\t\t\t\t\t\t\t<Breakdown>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">4800</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>YQ</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<CurrCode NumberOfDecimals=\"2\">EUR</CurrCode>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<AirportAmount>4800</AirportAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<AirportCode>CDG</AirportCode>\r\n\t\t\t\t\t\t\t\t\t\t\t</CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">4800</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>YQI LH CARRIER IMPOSED MISC FEE</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">4800</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>YQ</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<CurrCode NumberOfDecimals=\"2\">EUR</CurrCode>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<AirportAmount>4800</AirportAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t\t<AirportCode>FRA</AirportCode>\r\n\t\t\t\t\t\t\t\t\t\t\t</CollectionPoint>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">4800</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>YQI LH CARRIER IMPOSED MISC FEE</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">2183</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Nation>DE</Nation>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>RD</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">2183</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>PASSENGER SERVICE CHARGE DOMESTIC DEPARTURE</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">466</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>FR</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">466</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>CIVIL AVIATION TAX DOMESTIC AND INTERNATIONAL</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">1170</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>FR</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">1170</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>AIRPORT TAX DOMESTIC AND INTERNATIONAL</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">1127</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>IZ</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">1127</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>AIR PASSENGER SOLIDARITY TAX</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">900</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>O4</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">900</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>AIR PASSENGER SOLIDARITY TAX SURPLUS</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t\t<Tax>\r\n\t\t\t\t\t\t\t\t\t\t\t<Amount Code=\"EUR\">1203</Amount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Nation>FR</Nation>\r\n\t\t\t\t\t\t\t\t\t\t\t<TaxCode>QX</TaxCode>\r\n\t\t\t\t\t\t\t\t\t\t\t<LocalAmount Code=\"EUR\">1203</LocalAmount>\r\n\t\t\t\t\t\t\t\t\t\t\t<Description>PASSENGER SERVICE CHARGE INTERNATIONAL</Description>\r\n\t\t\t\t\t\t\t\t\t\t</Tax>\r\n\t\t\t\t\t\t\t\t\t</Breakdown>\r\n\t\t\t\t\t\t\t\t</Taxes>\r\n\t\t\t\t\t\t\t</Price>\r\n\t\t\t\t\t\t\t<FareBasis>\r\n\t\t\t\t\t\t\t\t<FareBasisCode refs=\"FG1\">\r\n\t\t\t\t\t\t\t\t\t<Code>P05BUZP9</Code>\r\n\t\t\t\t\t\t\t\t</FareBasisCode>\r\n\t\t\t\t\t\t\t\t<RBD>P P</RBD>\r\n\t\t\t\t\t\t\t\t<CabinType>\r\n\t\t\t\t\t\t\t\t\t<CabinTypeCode>C C</CabinTypeCode>\r\n\t\t\t\t\t\t\t\t\t<CabinTypeName>Business Business</CabinTypeName>\r\n\t\t\t\t\t\t\t\t</CabinType>\r\n\t\t\t\t\t\t\t</FareBasis>\r\n\t\t\t\t\t\t\t<TicketDesig>Y</TicketDesig>\r\n\t\t\t\t\t\t\t<FareRules>\r\n\t\t\t\t\t\t\t\t<Penalty RefundableInd=\"true\" CancelFeeInd=\"false\" ChangeFeeInd=\"false\">\r\n\t\t\t\t\t\t\t\t\t<Details>\r\n\t\t\t\t\t\t\t\t\t\t<Detail refs=\"RM97C30AC8\">\r\n\t\t\t\t\t\t\t\t\t\t\t<Type>Change</Type>\r\n\t\t\t\t\t\t\t\t\t\t</Detail>\r\n\t\t\t\t\t\t\t\t\t\t<Detail refs=\"RMBD89889E\">\r\n\t\t\t\t\t\t\t\t\t\t\t<Type>Cancel</Type>\r\n\t\t\t\t\t\t\t\t\t\t</Detail>\r\n\t\t\t\t\t\t\t\t\t</Details>\r\n\t\t\t\t\t\t\t\t</Penalty>\r\n\t\t\t\t\t\t\t\t<AdvanceStay>\r\n\t\t\t\t\t\t\t\t\t<AdvancePurchase Context=\"LATEST\">P5D</AdvancePurchase>\r\n\t\t\t\t\t\t\t\t\t<AdvanceTicketing>\r\n\t\t\t\t\t\t\t\t\t\t<AdvanceReservation Context=\"EARLIEST\">P5D</AdvanceReservation>\r\n\t\t\t\t\t\t\t\t\t\t<AdvanceDeparture Context=\"LATEST\">PT72H</AdvanceDeparture>\r\n\t\t\t\t\t\t\t\t\t</AdvanceTicketing>\r\n\t\t\t\t\t\t\t\t</AdvanceStay>\r\n\t\t\t\t\t\t\t\t<Ticketing>\r\n\t\t\t\t\t\t\t\t\t<Endorsements>\r\n\t\t\t\t\t\t\t\t\t\t<Endorsement>FARE RESTRICTION MAY APPLY</Endorsement>\r\n\t\t\t\t\t\t\t\t\t</Endorsements>\r\n\t\t\t\t\t\t\t\t</Ticketing>\r\n\t\t\t\t\t\t\t</FareRules>\r\n\t\t\t\t\t\t\t<PriceClassRef>LHBusiness-1</PriceClassRef>\r\n\t\t\t\t\t\t\t<SegmentRefs ON_Point=\"CDG\" OFF_Point=\"MUC\">S2 S3</SegmentRefs>\r\n\t\t\t\t\t\t</FareComponent>\r\n\t\t\t\t\t\t<FlightMileage>\r\n\t\t\t\t\t\t\t<Value>465</Value>\r\n\t\t\t\t\t\t</FlightMileage>\r\n\t\t\t\t\t</FareDetail>\r\n\t\t\t\t</OrderItem>\r\n\t\t\t</OrderItems>\r\n\t\t</Order>\r\n\t\t<DataLists>\r\n\t\t\t<PassengerList>\r\n\t\t\t\t<Passenger PassengerID=\"T1\">\r\n\t\t\t\t\t<PTC>ADT</PTC>\r\n\t\t\t\t\t<Birthdate>1980-01-01</Birthdate>\r\n\t\t\t\t\t<Individual>\r\n\t\t\t\t\t\t<Birthdate>1980-01-01</Birthdate>\r\n\t\t\t\t\t\t<Gender>Male</Gender>\r\n\t\t\t\t\t\t<NameTitle>MR</NameTitle>\r\n\t\t\t\t\t\t<GivenName>DAVE</GivenName>\r\n\t\t\t\t\t\t<Surname>DOE</Surname>\r\n\t\t\t\t\t</Individual>\r\n\t\t\t\t\t<ContactInfoRef>CI1</ContactInfoRef>\r\n\t\t\t\t</Passenger>\r\n\t\t\t</PassengerList>\r\n\t\t\t<ContactList>\r\n\t\t\t\t<ContactInformation ContactID=\"CI1\">\r\n\t\t\t\t\t<ContactProvided>\r\n\t\t\t\t\t\t<Phone>\r\n\t\t\t\t\t\t\t<Label>Business</Label>\r\n\t\t\t\t\t\t\t<PhoneNumber>33600000001</PhoneNumber>\r\n\t\t\t\t\t\t</Phone>\r\n\t\t\t\t\t</ContactProvided>\r\n\t\t\t\t\t<ContactProvided>\r\n\t\t\t\t\t\t<EmailAddress>\r\n\t\t\t\t\t\t\t<Label>Operational</Label>\r\n\t\t\t\t\t\t\t<EmailAddressValue>ftheret@voyagexepert.fr</EmailAddressValue>\r\n\t\t\t\t\t\t</EmailAddress>\r\n\t\t\t\t\t</ContactProvided>\r\n\t\t\t\t\t<ContactProvided>\r\n\t\t\t\t\t\t<EmailAddress>\r\n\t\t\t\t\t\t\t<Label>Business</Label>\r\n\t\t\t\t\t\t\t<EmailAddressValue>info@voyagexepert.fr</EmailAddressValue>\r\n\t\t\t\t\t\t</EmailAddress>\r\n\t\t\t\t\t</ContactProvided>\r\n\t\t\t\t</ContactInformation>\r\n\t\t\t</ContactList>\r\n\t\t\t<BagDisclosureList>\r\n\t\t\t\t<BagDisclosure ListKey=\"BaggageKey-1\">\r\n\t\t\t\t\t<BagRule>N</BagRule>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Not subject to US DOT and CTA Reservation or Disclosure</Text>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t</BagDisclosure>\r\n\t\t\t</BagDisclosureList>\r\n\t\t\t<BaggageAllowanceList>\r\n\t\t\t\t<BaggageAllowance BaggageAllowanceID=\"BA4C480BA3-CO\">\r\n\t\t\t\t\t<BaggageCategory>CarryOn</BaggageCategory>\r\n\t\t\t\t\t<AllowanceDescription>\r\n\t\t\t\t\t\t<ApplicableParty>Traveler</ApplicableParty>\r\n\t\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t\t<Text>CARRYON HAND BAGGAGE ALLOWANCE</Text>\r\n\t\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t\t<Text>CARRY8KG 18LB UPTO46LI 118LCM</Text>\r\n\t\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t</AllowanceDescription>\r\n\t\t\t\t\t<PieceAllowance>\r\n\t\t\t\t\t\t<ApplicableParty>Traveler</ApplicableParty>\r\n\t\t\t\t\t\t<TotalQuantity>2</TotalQuantity>\r\n\t\t\t\t\t\t<PieceMeasurements Quantity=\"2\"></PieceMeasurements>\r\n\t\t\t\t\t</PieceAllowance>\r\n\t\t\t\t\t<BaggageDeterminingCarrier>\r\n\t\t\t\t\t\t<AirlineID>LH</AirlineID>\r\n\t\t\t\t\t</BaggageDeterminingCarrier>\r\n\t\t\t\t</BaggageAllowance>\r\n\t\t\t\t<BaggageAllowance BaggageAllowanceID=\"BA285DC125-CO\">\r\n\t\t\t\t\t<BaggageCategory>CarryOn</BaggageCategory>\r\n\t\t\t\t\t<AllowanceDescription>\r\n\t\t\t\t\t\t<ApplicableParty>Traveler</ApplicableParty>\r\n\t\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t\t<Text>CARRYON HAND BAGGAGE ALLOWANCE</Text>\r\n\t\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t\t<Text>CARRY8KG 18LB UPTO46LI 118LCM</Text>\r\n\t\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t</AllowanceDescription>\r\n\t\t\t\t\t<PieceAllowance>\r\n\t\t\t\t\t\t<ApplicableParty>Traveler</ApplicableParty>\r\n\t\t\t\t\t\t<TotalQuantity>2</TotalQuantity>\r\n\t\t\t\t\t\t<PieceMeasurements Quantity=\"2\"></PieceMeasurements>\r\n\t\t\t\t\t</PieceAllowance>\r\n\t\t\t\t\t<BaggageDeterminingCarrier>\r\n\t\t\t\t\t\t<AirlineID>LH</AirlineID>\r\n\t\t\t\t\t</BaggageDeterminingCarrier>\r\n\t\t\t\t</BaggageAllowance>\r\n\t\t\t\t<BaggageAllowance BaggageAllowanceID=\"BA70830732\">\r\n\t\t\t\t\t<BaggageCategory>Checked</BaggageCategory>\r\n\t\t\t\t\t<AllowanceDescription Concept=\"Piece\">\r\n\t\t\t\t\t\t<ApplicableParty>Traveler</ApplicableParty>\r\n\t\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t\t<Text>CHECKED ALLOWANCE</Text>\r\n\t\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t</AllowanceDescription>\r\n\t\t\t\t\t<PieceAllowance>\r\n\t\t\t\t\t\t<ApplicableParty>Traveler</ApplicableParty>\r\n\t\t\t\t\t\t<TotalQuantity>2</TotalQuantity>\r\n\t\t\t\t\t\t<PieceMeasurements Quantity=\"2\">\r\n\t\t\t\t\t\t\t<PieceWeightAllowance>\r\n\t\t\t\t\t\t\t\t<MaximumWeight>\r\n\t\t\t\t\t\t\t\t\t<Value>32.0</Value>\r\n\t\t\t\t\t\t\t\t\t<UOM>KG</UOM>\r\n\t\t\t\t\t\t\t\t</MaximumWeight>\r\n\t\t\t\t\t\t\t\t<MaximumWeight>\r\n\t\t\t\t\t\t\t\t\t<Value>70.0</Value>\r\n\t\t\t\t\t\t\t\t\t<UOM>LBS</UOM>\r\n\t\t\t\t\t\t\t\t</MaximumWeight>\r\n\t\t\t\t\t\t\t</PieceWeightAllowance>\r\n\t\t\t\t\t\t\t<PieceDimensionAllowance>\r\n\t\t\t\t\t\t\t\t<DimensionUOM>Centimeter</DimensionUOM>\r\n\t\t\t\t\t\t\t\t<Dimensions>\r\n\t\t\t\t\t\t\t\t\t<Category>Length</Category>\r\n\t\t\t\t\t\t\t\t\t<MaxValue>158.0</MaxValue>\r\n\t\t\t\t\t\t\t\t</Dimensions>\r\n\t\t\t\t\t\t\t</PieceDimensionAllowance>\r\n\t\t\t\t\t\t\t<PieceDimensionAllowance>\r\n\t\t\t\t\t\t\t\t<DimensionUOM>Inch</DimensionUOM>\r\n\t\t\t\t\t\t\t\t<Dimensions>\r\n\t\t\t\t\t\t\t\t\t<Category>Length</Category>\r\n\t\t\t\t\t\t\t\t\t<MaxValue>62.0</MaxValue>\r\n\t\t\t\t\t\t\t\t</Dimensions>\r\n\t\t\t\t\t\t\t</PieceDimensionAllowance>\r\n\t\t\t\t\t\t</PieceMeasurements>\r\n\t\t\t\t\t</PieceAllowance>\r\n\t\t\t\t\t<BaggageDeterminingCarrier>\r\n\t\t\t\t\t\t<AirlineID>LH</AirlineID>\r\n\t\t\t\t\t</BaggageDeterminingCarrier>\r\n\t\t\t\t</BaggageAllowance>\r\n\t\t\t</BaggageAllowanceList>\r\n\t\t\t<FareList>\r\n\t\t\t\t<FareGroup ListKey=\"FG1\" refs=\"FRK7788CFB1\">\r\n\t\t\t\t\t<Fare>\r\n\t\t\t\t\t\t<FareCode>70J</FareCode>\r\n\t\t\t\t\t</Fare>\r\n\t\t\t\t\t<FareBasisCode>\r\n\t\t\t\t\t\t<Code>P05BUZP9</Code>\r\n\t\t\t\t\t</FareBasisCode>\r\n\t\t\t\t</FareGroup>\r\n\t\t\t</FareList>\r\n\t\t\t<FlightSegmentList>\r\n\t\t\t\t<FlightSegment SegmentKey=\"S2\" ConnectInd=\"true\" ElectronicTicketInd=\"true\" SecureFlight=\"false\">\r\n\t\t\t\t\t<Departure>\r\n\t\t\t\t\t\t<AirportCode>CDG</AirportCode>\r\n\t\t\t\t\t\t<Date>2021-07-25</Date>\r\n\t\t\t\t\t\t<Time>18:25</Time>\r\n\t\t\t\t\t\t<AirportName>Paris Charles de Gaulle Apt, FR</AirportName>\r\n\t\t\t\t\t\t<Terminal>\r\n\t\t\t\t\t\t\t<Name>2B</Name>\r\n\t\t\t\t\t\t</Terminal>\r\n\t\t\t\t\t</Departure>\r\n\t\t\t\t\t<Arrival>\r\n\t\t\t\t\t\t<AirportCode>FRA</AirportCode>\r\n\t\t\t\t\t\t<Date>2021-07-25</Date>\r\n\t\t\t\t\t\t<Time>19:35</Time>\r\n\t\t\t\t\t\t<AirportName>Frankfurt International Apt, DE</AirportName>\r\n\t\t\t\t\t\t<Terminal>\r\n\t\t\t\t\t\t\t<Name>1</Name>\r\n\t\t\t\t\t\t</Terminal>\r\n\t\t\t\t\t</Arrival>\r\n\t\t\t\t\t<MarketingCarrier>\r\n\t\t\t\t\t\t<AirlineID>LH</AirlineID>\r\n\t\t\t\t\t\t<Name>Deutsche Lufthansa AG</Name>\r\n\t\t\t\t\t\t<FlightNumber>1041</FlightNumber>\r\n\t\t\t\t\t</MarketingCarrier>\r\n\t\t\t\t\t<Equipment>\r\n\t\t\t\t\t\t<AircraftCode>32N</AircraftCode>\r\n\t\t\t\t\t\t<Name>Airbus A320neo</Name>\r\n\t\t\t\t\t</Equipment>\r\n\t\t\t\t\t<ClassOfService>\r\n\t\t\t\t\t\t<Code>P</Code>\r\n\t\t\t\t\t</ClassOfService>\r\n\t\t\t\t\t<FlightDetail>\r\n\t\t\t\t\t\t<FlightDistance>\r\n\t\t\t\t\t\t\t<Value>279</Value>\r\n\t\t\t\t\t\t\t<UOM>Miles</UOM>\r\n\t\t\t\t\t\t</FlightDistance>\r\n\t\t\t\t\t\t<FlightDuration>\r\n\t\t\t\t\t\t\t<Value>PT1H10M</Value>\r\n\t\t\t\t\t\t</FlightDuration>\r\n\t\t\t\t\t\t<Stops>\r\n\t\t\t\t\t\t\t<StopQuantity>0</StopQuantity>\r\n\t\t\t\t\t\t</Stops>\r\n\t\t\t\t\t\t<ResDateTime>\r\n\t\t\t\t\t\t\t<Date time=\"11:37\">2021-07-06</Date>\r\n\t\t\t\t\t\t</ResDateTime>\r\n\t\t\t\t\t</FlightDetail>\r\n\t\t\t\t</FlightSegment>\r\n\t\t\t\t<FlightSegment SegmentKey=\"S3\" ElectronicTicketInd=\"true\" SecureFlight=\"false\">\r\n\t\t\t\t\t<Departure>\r\n\t\t\t\t\t\t<AirportCode>FRA</AirportCode>\r\n\t\t\t\t\t\t<Date>2021-07-25</Date>\r\n\t\t\t\t\t\t<Time>21:15</Time>\r\n\t\t\t\t\t\t<AirportName>Frankfurt International Apt, DE</AirportName>\r\n\t\t\t\t\t\t<Terminal>\r\n\t\t\t\t\t\t\t<Name>1</Name>\r\n\t\t\t\t\t\t</Terminal>\r\n\t\t\t\t\t</Departure>\r\n\t\t\t\t\t<Arrival>\r\n\t\t\t\t\t\t<AirportCode>MUC</AirportCode>\r\n\t\t\t\t\t\t<Date>2021-07-25</Date>\r\n\t\t\t\t\t\t<Time>22:10</Time>\r\n\t\t\t\t\t\t<AirportName>Munich International Airport, DE</AirportName>\r\n\t\t\t\t\t\t<Terminal>\r\n\t\t\t\t\t\t\t<Name>2</Name>\r\n\t\t\t\t\t\t</Terminal>\r\n\t\t\t\t\t</Arrival>\r\n\t\t\t\t\t<MarketingCarrier>\r\n\t\t\t\t\t\t<AirlineID>LH</AirlineID>\r\n\t\t\t\t\t\t<Name>Deutsche Lufthansa AG</Name>\r\n\t\t\t\t\t\t<FlightNumber>122</FlightNumber>\r\n\t\t\t\t\t</MarketingCarrier>\r\n\t\t\t\t\t<Equipment>\r\n\t\t\t\t\t\t<AircraftCode>32A</AircraftCode>\r\n\t\t\t\t\t\t<Name>Airbus A320 -Sharklets-</Name>\r\n\t\t\t\t\t</Equipment>\r\n\t\t\t\t\t<ClassOfService>\r\n\t\t\t\t\t\t<Code>P</Code>\r\n\t\t\t\t\t</ClassOfService>\r\n\t\t\t\t\t<FlightDetail>\r\n\t\t\t\t\t\t<FlightDistance>\r\n\t\t\t\t\t\t\t<Value>186</Value>\r\n\t\t\t\t\t\t\t<UOM>Miles</UOM>\r\n\t\t\t\t\t\t</FlightDistance>\r\n\t\t\t\t\t\t<FlightDuration>\r\n\t\t\t\t\t\t\t<Value>PT0H55M</Value>\r\n\t\t\t\t\t\t</FlightDuration>\r\n\t\t\t\t\t\t<Stops>\r\n\t\t\t\t\t\t\t<StopQuantity>0</StopQuantity>\r\n\t\t\t\t\t\t</Stops>\r\n\t\t\t\t\t\t<ResDateTime>\r\n\t\t\t\t\t\t\t<Date time=\"11:37\">2021-07-06</Date>\r\n\t\t\t\t\t\t</ResDateTime>\r\n\t\t\t\t\t</FlightDetail>\r\n\t\t\t\t</FlightSegment>\r\n\t\t\t</FlightSegmentList>\r\n\t\t\t<FlightList>\r\n\t\t\t\t<Flight FlightKey=\"F1\">\r\n\t\t\t\t\t<SegmentReferences OnPoint=\"CDG\" OffPoint=\"MUC\">S2 S3</SegmentReferences>\r\n\t\t\t\t</Flight>\r\n\t\t\t</FlightList>\r\n\t\t\t<OriginDestinationList>\r\n\t\t\t\t<OriginDestination OriginDestinationKey=\"O1\">\r\n\t\t\t\t\t<DepartureCode>CDG</DepartureCode>\r\n\t\t\t\t\t<ArrivalCode>MUC</ArrivalCode>\r\n\t\t\t\t\t<FlightReferences OnPoint=\"CDG\" OffPoint=\"MUC\">F1</FlightReferences>\r\n\t\t\t\t</OriginDestination>\r\n\t\t\t</OriginDestinationList>\r\n\t\t\t<InstructionsList>\r\n\t\t\t\t<Instruction ListKey=\"I2\">\r\n\t\t\t\t\t<FreeFormTextInstruction refs=\"S2\">\r\n\t\t\t\t\t\t<Remark>PLS ADD PAX MOBILE CTC FOR IRREG COMMUNICATION</Remark>\r\n\t\t\t\t\t</FreeFormTextInstruction>\r\n\t\t\t\t</Instruction>\r\n\t\t\t\t<Instruction ListKey=\"I3\">\r\n\t\t\t\t\t<FreeFormTextInstruction refs=\"S3\">\r\n\t\t\t\t\t\t<Remark>PLS ADD PAX MOBILE CTC FOR IRREG COMMUNICATION</Remark>\r\n\t\t\t\t\t</FreeFormTextInstruction>\r\n\t\t\t\t</Instruction>\r\n\t\t\t</InstructionsList>\r\n\t\t\t<PriceClassList>\r\n\t\t\t\t<PriceClass PriceClassID=\"LHBusiness-1\">\r\n\t\t\t\t\t<Name>Business</Name>\r\n\t\t\t\t\t<Code>BUZ00</Code>\r\n\t\t\t\t</PriceClass>\r\n\t\t\t</PriceClassList>\r\n\t\t\t<ServiceDefinitionList>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-BLG\">\r\n\t\t\t\t\t<Name>Business Class Lounge</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>BLG</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Business Class Lounge</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-MNB\">\r\n\t\t\t\t\t<Name>Meal and Beverages</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>MNB</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Meal and Beverages</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-SEA\">\r\n\t\t\t\t\t<Name>Empty Middle Seat</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>SEA</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Empty Middle Seat</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-MAG\">\r\n\t\t\t\t\t<Name>e-Magazines / e-Newspapers</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>MAG</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>e-Magazines / e-Newspapers</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-0LW\">\r\n\t\t\t\t\t<Name>Priority Security if available</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>0LW</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Priority Security if available</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-050\">\r\n\t\t\t\t\t<Name>Seat Reservation</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>050</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Seat Reservation</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"A-OC-057\">\r\n\t\t\t\t\t<Name>MILEAGE ACCRUAL</Name>\r\n\t\t\t\t\t<Encoding>\r\n\t\t\t\t\t\t<RFIC>A</RFIC>\r\n\t\t\t\t\t\t<Type>1</Type>\r\n\t\t\t\t\t\t<Code>OC</Code>\r\n\t\t\t\t\t\t<SubCode>057</SubCode>\r\n\t\t\t\t\t</Encoding>\r\n\t\t\t\t\t<FeeMethod>OC</FeeMethod>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>MILEAGE ACCRUAL</Text>\r\n\t\t\t\t\t\t\t<Application>Details</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Included</Text>\r\n\t\t\t\t\t\t\t<Application>Type</Application>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t\t<Settlement>\r\n\t\t\t\t\t\t<Method>F</Method>\r\n\t\t\t\t\t</Settlement>\r\n\t\t\t\t\t<BookingInstructions>\r\n\t\t\t\t\t\t<Method>API</Method>\r\n\t\t\t\t\t</BookingInstructions>\r\n\t\t\t\t\t<ValidatingCarrier>LH</ValidatingCarrier>\r\n\t\t\t\t\t<Detail>\r\n\t\t\t\t\t\t<ServiceCoupon>\r\n\t\t\t\t\t\t\t<CouponType>F</CouponType>\r\n\t\t\t\t\t\t</ServiceCoupon>\r\n\t\t\t\t\t</Detail>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"BASRV374CBA69-CO\">\r\n\t\t\t\t\t<Name>Carry On Bag Allowance</Name>\r\n\t\t\t\t\t<BaggageAllowanceRef>BA4C480BA3-CO</BaggageAllowanceRef>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Carry On Bag Allowance</Text>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"BASRV78EBAAF4-CO\">\r\n\t\t\t\t\t<Name>Carry On Bag Allowance</Name>\r\n\t\t\t\t\t<BaggageAllowanceRef>BA285DC125-CO</BaggageAllowanceRef>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Carry On Bag Allowance</Text>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t\t<ServiceDefinition ServiceDefinitionID=\"BASRVE61FF944\">\r\n\t\t\t\t\t<Name>Checked Bag Allowance</Name>\r\n\t\t\t\t\t<BaggageAllowanceRef>BA70830732</BaggageAllowanceRef>\r\n\t\t\t\t\t<Descriptions>\r\n\t\t\t\t\t\t<Description>\r\n\t\t\t\t\t\t\t<Text>Checked Bag Allowance</Text>\r\n\t\t\t\t\t\t</Description>\r\n\t\t\t\t\t</Descriptions>\r\n\t\t\t\t</ServiceDefinition>\r\n\t\t\t</ServiceDefinitionList>\r\n\t\t</DataLists>\r\n\t\t<Metadata>\r\n\t\t\t<PassengerMetadata MetadataKey=\"M2\">\r\n\t\t\t\t<AugmentationPoint>\r\n\t\t\t\t\t<AugPoint>\r\n\t\t\t\t\t\t<OtherServiceInformation xmlns=\"http://ndc.farelogix.com/aug\">\r\n\t\t\t\t\t\t\t<AirlineCode>YY</AirlineCode>\r\n\t\t\t\t\t\t\t<Text>FLJ BUJ</Text>\r\n\t\t\t\t\t\t</OtherServiceInformation>\r\n\t\t\t\t\t</AugPoint>\r\n\t\t\t\t</AugmentationPoint>\r\n\t\t\t</PassengerMetadata>\r\n\t\t\t<PassengerMetadata MetadataKey=\"M1\">\r\n\t\t\t\t<AugmentationPoint>\r\n\t\t\t\t\t<AugPoint>\r\n\t\t\t\t\t\t<OtherServiceInformation xmlns=\"http://ndc.farelogix.com/aug\">\r\n\t\t\t\t\t\t\t<TravelerIDRef>T1</TravelerIDRef>\r\n\t\t\t\t\t\t\t<AirlineCode>LH</AirlineCode>\r\n\t\t\t\t\t\t\t<OSICode>CTCA</OSICode>\r\n\t\t\t\t\t\t\t<Text>123 STREET BILLING MIAMI FL 33160 US</Text>\r\n\t\t\t\t\t\t</OtherServiceInformation>\r\n\t\t\t\t\t</AugPoint>\r\n\t\t\t\t</AugmentationPoint>\r\n\t\t\t</PassengerMetadata>\r\n\t\t\t<PassengerMetadata MetadataKey=\"M0\">\r\n\t\t\t\t<AugmentationPoint>\r\n\t\t\t\t\t<AugPoint>\r\n\t\t\t\t\t\t<SpecialServiceRequest xmlns=\"http://ndc.farelogix.com/aug\">\r\n\t\t\t\t\t\t\t<AirlineCode>F1</AirlineCode>\r\n\t\t\t\t\t\t\t<SSRCode>OTHS</SSRCode>\r\n\t\t\t\t\t\t\t<Text>PLS ADV TKT NBR BY 09JUL21/1137Z OR LH OPTG/MKTG FLTS WILL BE CANX / APPLIC FARE RULE APPLIES IF IT DEMANDS EARLIER TKTG</Text>\r\n\t\t\t\t\t\t</SpecialServiceRequest>\r\n\t\t\t\t\t</AugPoint>\r\n\t\t\t\t</AugmentationPoint>\r\n\t\t\t</PassengerMetadata>\r\n\t\t\t<Other>\r\n\t\t\t\t<OtherMetadata>\r\n\t\t\t\t\t<CurrencyMetadatas>\r\n\t\t\t\t\t\t<CurrencyMetadata MetadataKey=\"EUR\">\r\n\t\t\t\t\t\t\t<Decimals>2</Decimals>\r\n\t\t\t\t\t\t</CurrencyMetadata>\r\n\t\t\t\t\t</CurrencyMetadatas>\r\n\t\t\t\t</OtherMetadata>\r\n\t\t\t\t<OtherMetadata>\r\n\t\t\t\t\t<PriceMetadatas>\r\n\t\t\t\t\t\t<PriceMetadata MetadataKey=\"FRK7788CFB1\">\r\n\t\t\t\t\t\t\t<AugmentationPoint>\r\n\t\t\t\t\t\t\t\t<AugPoint>\r\n\t\t\t\t\t\t\t\t\t<FareRefKey xmlns=\"http://ndc.farelogix.com/aug\">pB8KF+pN8O?Q*qB9KTA+DB8O.4@TXO7+AW80017+MB80.037*CA96514*SN9NT@K*QL9XACT*QM93/./*Q/9@Q*NP91+NW8@BS*Q@96/*CR9/0.//+RL83421+AA855+DC8N@+?L8030./*BS9CTP+PS8/00*ER900*QP92+?Q8865~h9DAA~IYz o_w 9 @BS + rcfkdlsq!8Zy!gc 9 H/!*!daa!8!N/3ASYN8 + ``rBhqbmtls 9 03/,/.!*!db 9/~i*z hb!8!G1 + e`b 9 O.4@TXO7!*!_aqCgransmr!8!/4.-./ + ea!80~i]~i]~J9DKVO*flxKey</FareRefKey>\r\n\t\t\t\t\t\t\t\t</AugPoint>\r\n\t\t\t\t\t\t\t</AugmentationPoint>\r\n\t\t\t\t\t\t</PriceMetadata>\r\n\t\t\t\t\t\t<PriceMetadata MetadataKey=\"FCPI009C1B15\">\r\n\t\t\t\t\t\t\t<AugmentationPoint>\r\n\t\t\t\t\t\t\t\t<AugPoint>\r\n\t\t\t\t\t\t\t\t\t<FareCodePriceIndicator xmlns=\"http://ndc.farelogix.com/aug\">A</FareCodePriceIndicator>\r\n\t\t\t\t\t\t\t\t</AugPoint>\r\n\t\t\t\t\t\t\t</AugmentationPoint>\r\n\t\t\t\t\t\t</PriceMetadata>\r\n\t\t\t\t\t</PriceMetadatas>\r\n\t\t\t\t</OtherMetadata>\r\n\t\t\t\t<OtherMetadata>\r\n\t\t\t\t\t<RuleMetadatas>\r\n\t\t\t\t\t\t<RuleMetadata MetadataKey=\"RM97C30AC8\">\r\n\t\t\t\t\t\t\t<RuleID>Change</RuleID>\r\n\t\t\t\t\t\t\t<Values>\r\n\t\t\t\t\t\t\t\t<Value>\r\n\t\t\t\t\t\t\t\t\t<Instruction>Allowed</Instruction>\r\n\t\t\t\t\t\t\t\t</Value>\r\n\t\t\t\t\t\t\t</Values>\r\n\t\t\t\t\t\t</RuleMetadata>\r\n\t\t\t\t\t\t<RuleMetadata MetadataKey=\"RMBD89889E\">\r\n\t\t\t\t\t\t\t<RuleID>Cancel</RuleID>\r\n\t\t\t\t\t\t\t<Values>\r\n\t\t\t\t\t\t\t\t<Value>\r\n\t\t\t\t\t\t\t\t\t<Instruction>Allowed</Instruction>\r\n\t\t\t\t\t\t\t\t</Value>\r\n\t\t\t\t\t\t\t</Values>\r\n\t\t\t\t\t\t</RuleMetadata>\r\n\t\t\t\t\t</RuleMetadatas>\r\n\t\t\t\t</OtherMetadata>\r\n\t\t\t</Other>\r\n\t\t</Metadata>\r\n\t</Response>\r\n</OrderViewRS>\r\n</RSP></ns1:XXTransactionResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>",
+   "JSONResponse": {
+    "OrderViewRS": {
+     "Version": "17.2",
+     "TransactionIdentifier": "ORRE-BC7B-97BA-8306",
+     "Document": {},
+     "Party": {
+      "Sender": {
+       "AggregatorSender": {
+        "AggregatorID": {
+         "data": "F1"
+        }
+       }
+      },
+      "Recipient": {
+       "TravelAgencyRecipient": {
+        "PseudoCity": {
+         "Owner": "F1",
+         "data": "ASRR"
+        },
+        "AgencyID": {
+         "data": "ASRR"
+        },
+        "AgentUser": {
+         "Name": {
+          "data": "00110795"
+         },
+         "PseudoCity": {
+          "Owner": "F1",
+          "data": "ASRR"
+         },
+         "IATA_Number": {
+          "data": "00110795"
+         },
+         "AgentUserID": {
+          "data": "9LJG2020"
+         }
+        }
+       }
+      }
+     },
+     "Success": {},
+     "Warnings": {
+      "array": [
+       {
+        "Warning": {
+         "Code": "005",
+         "Type": "SSR",
+         "ShortText": "RFUTWU | SSR change - 2021-07-06T11:37:20, LH, LHC100000204445.INV ACC NMBR.",
+         "data": "Special services FQTV - NO"
+        }
+       },
+       {
+        "Warning": {
+         "Code": "005",
+         "Type": "SSR",
+         "ShortText": "RFUTWU | SSR change - 2021-07-06T11:37:30, LH, PLS ADV TKT NBR BY 09JUL21/1137Z OR LH OPTG/MKTG FLTS WILL BE CANX / APPLIC FARE RULE APPLIES IF IT DEMANDS EARLIER TKTG",
+         "data": "Special services OTHS"
+        }
+       }
+      ]
+     },
+     "Response": {
+      "Order": {
+       "OrderID": "LH22094CFF0A3",
+       "Owner": "LH",
+       "BookingReferences": {
+        "array": [
+         {
+          "BookingReference": {
+           "ID": {
+            "data": "RFUTWU"
+           },
+           "OtherID": {
+            "data": "F1"
+           }
+          }
+         },
+         {
+          "BookingReference": {
+           "ID": {
+            "data": "UKO9CA"
+           },
+           "AirlineID": {
+            "Name": "Lufthansa",
+            "data": "LH"
+           }
+          }
+         }
+        ]
+       },
+       "TotalOrderPrice": {
+        "DetailCurrencyPrice": {
+         "Total": {
+          "Code": "EUR",
+          "data": "16749"
+         }
+        }
+       },
+       "OrderItems": {
+        "OrderItem": {
+         "array": [
+          {
+           "PriceDetail": {
+            "TotalAmount": {
+             "DetailCurrencyPrice": {
+              "Total": {
+               "Code": "EUR",
+               "data": "16749"
+              }
+             }
+            },
+            "BaseAmount": {
+             "Code": "EUR",
+             "data": "100"
+            },
+            "Taxes": {
+             "Total": {
+              "Code": "EUR",
+              "data": "16649"
+             }
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV1-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-BLG"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV2-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-BLG"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV3-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-MNB"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV4-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-MNB"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV5-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-SEA"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV6-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-SEA"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV7-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-MAG"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV8-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-MAG"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV9-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-0LW"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV10-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-0LW"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV11-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-050"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV12-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-050"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV13-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "A-OC-057"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "INCLUDEDSRV14-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "A-OC-057"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "BAGGAGESRV1-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "BASRVE61FF944"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "BAGGAGESRV2-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "BASRVE61FF944"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "BAGGAGESRV3-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S3",
+             "data": "BASRV78EBAAF4-CO"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "BAGGAGESRV4-T1",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "ServiceDefinitionRef": {
+             "SegmentRef": "S2",
+             "data": "BASRV374CBA69-CO"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "SRV1-T1-S2",
+            "ServiceStatus": "HK",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "SegmentRef": {
+             "data": "S2"
+            }
+           }
+          },
+          {
+           "Service": {
+            "ServiceID": "SRV1-T1-S3",
+            "ServiceStatus": "HK",
+            "PassengerRef": {
+             "data": "T1"
+            },
+            "SegmentRef": {
+             "data": "S3"
+            }
+           }
+          },
+          {
+           "TimeLimits": {
+            "PaymentTimeLimit": {
+             "Timestamp": "2021-07-09T13:37:00"
+            },
+            "TicketingTimeLimits": {
+             "Timestamp": "2021-07-09T13:37:00"
+            }
+           }
+          },
+          {
+           "FareDetail": {
+            "FareIndicatorCode": {
+             "data": "4"
+            },
+            "PassengerRefs": {
+             "data": "T1"
+            },
+            "Price": {
+             "TotalAmount": {
+              "DetailCurrencyPrice": {
+               "Total": {
+                "Code": "EUR",
+                "data": "16749"
+               }
+              }
+             },
+             "BaseAmount": {
+              "Code": "EUR",
+              "data": "100"
+             },
+             "Taxes": {
+              "Total": {
+               "Code": "EUR",
+               "data": "16649"
+              },
+              "Breakdown": {
+               "array": [
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "4800"
+                  },
+                  "TaxCode": {
+                   "data": "YQ"
+                  },
+                  "CollectionPoint": {
+                   "CurrCode": {
+                    "NumberOfDecimals": "2",
+                    "data": "EUR"
+                   },
+                   "AirportAmount": {
+                    "data": "4800"
+                   },
+                   "AirportCode": {
+                    "data": "CDG"
+                   }
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "4800"
+                  },
+                  "Description": {
+                   "data": "YQI LH CARRIER IMPOSED MISC FEE"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "4800"
+                  },
+                  "TaxCode": {
+                   "data": "YQ"
+                  },
+                  "CollectionPoint": {
+                   "CurrCode": {
+                    "NumberOfDecimals": "2",
+                    "data": "EUR"
+                   },
+                   "AirportAmount": {
+                    "data": "4800"
+                   },
+                   "AirportCode": {
+                    "data": "FRA"
+                   }
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "4800"
+                  },
+                  "Description": {
+                   "data": "YQI LH CARRIER IMPOSED MISC FEE"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "2183"
+                  },
+                  "Nation": {
+                   "data": "DE"
+                  },
+                  "TaxCode": {
+                   "data": "RD"
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "2183"
+                  },
+                  "Description": {
+                   "data": "PASSENGER SERVICE CHARGE DOMESTIC DEPARTURE"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "466"
+                  },
+                  "Nation": {
+                   "data": "FR"
+                  },
+                  "TaxCode": {
+                   "data": "FR"
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "466"
+                  },
+                  "Description": {
+                   "data": "CIVIL AVIATION TAX DOMESTIC AND INTERNATIONAL"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "1170"
+                  },
+                  "Nation": {
+                   "data": "FR"
+                  },
+                  "TaxCode": {
+                   "data": "FR"
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "1170"
+                  },
+                  "Description": {
+                   "data": "AIRPORT TAX DOMESTIC AND INTERNATIONAL"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "1127"
+                  },
+                  "Nation": {
+                   "data": "FR"
+                  },
+                  "TaxCode": {
+                   "data": "IZ"
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "1127"
+                  },
+                  "Description": {
+                   "data": "AIR PASSENGER SOLIDARITY TAX"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "900"
+                  },
+                  "Nation": {
+                   "data": "FR"
+                  },
+                  "TaxCode": {
+                   "data": "O4"
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "900"
+                  },
+                  "Description": {
+                   "data": "AIR PASSENGER SOLIDARITY TAX SURPLUS"
+                  }
+                 }
+                },
+                {
+                 "Tax": {
+                  "RefundInd": "true",
+                  "Amount": {
+                   "Code": "EUR",
+                   "data": "1203"
+                  },
+                  "Nation": {
+                   "data": "FR"
+                  },
+                  "TaxCode": {
+                   "data": "QX"
+                  },
+                  "LocalAmount": {
+                   "Code": "EUR",
+                   "data": "1203"
+                  },
+                  "Description": {
+                   "data": "PASSENGER SERVICE CHARGE INTERNATIONAL"
+                  }
+                 }
+                }
+               ]
+              }
+             }
+            },
+            "FareComponent": {
+             "Price": {
+              "TotalAmount": {
+               "DetailCurrencyPrice": {
+                "Total": {
+                 "Code": "EUR",
+                 "data": "16749"
+                }
+               }
+              },
+              "BaseAmount": {
+               "Code": "EUR",
+               "data": "100"
+              },
+              "Taxes": {
+               "Total": {
+                "Code": "EUR",
+                "data": "16649"
+               },
+               "Breakdown": {
+                "array": [
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "4800"
+                   },
+                   "TaxCode": {
+                    "data": "YQ"
+                   },
+                   "CollectionPoint": {
+                    "CurrCode": {
+                     "NumberOfDecimals": "2",
+                     "data": "EUR"
+                    },
+                    "AirportAmount": {
+                     "data": "4800"
+                    },
+                    "AirportCode": {
+                     "data": "CDG"
+                    }
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "4800"
+                   },
+                   "Description": {
+                    "data": "YQI LH CARRIER IMPOSED MISC FEE"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "4800"
+                   },
+                   "TaxCode": {
+                    "data": "YQ"
+                   },
+                   "CollectionPoint": {
+                    "CurrCode": {
+                     "NumberOfDecimals": "2",
+                     "data": "EUR"
+                    },
+                    "AirportAmount": {
+                     "data": "4800"
+                    },
+                    "AirportCode": {
+                     "data": "FRA"
+                    }
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "4800"
+                   },
+                   "Description": {
+                    "data": "YQI LH CARRIER IMPOSED MISC FEE"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "2183"
+                   },
+                   "Nation": {
+                    "data": "DE"
+                   },
+                   "TaxCode": {
+                    "data": "RD"
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "2183"
+                   },
+                   "Description": {
+                    "data": "PASSENGER SERVICE CHARGE DOMESTIC DEPARTURE"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "466"
+                   },
+                   "Nation": {
+                    "data": "FR"
+                   },
+                   "TaxCode": {
+                    "data": "FR"
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "466"
+                   },
+                   "Description": {
+                    "data": "CIVIL AVIATION TAX DOMESTIC AND INTERNATIONAL"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "1170"
+                   },
+                   "Nation": {
+                    "data": "FR"
+                   },
+                   "TaxCode": {
+                    "data": "FR"
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "1170"
+                   },
+                   "Description": {
+                    "data": "AIRPORT TAX DOMESTIC AND INTERNATIONAL"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "1127"
+                   },
+                   "Nation": {
+                    "data": "FR"
+                   },
+                   "TaxCode": {
+                    "data": "IZ"
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "1127"
+                   },
+                   "Description": {
+                    "data": "AIR PASSENGER SOLIDARITY TAX"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "900"
+                   },
+                   "Nation": {
+                    "data": "FR"
+                   },
+                   "TaxCode": {
+                    "data": "O4"
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "900"
+                   },
+                   "Description": {
+                    "data": "AIR PASSENGER SOLIDARITY TAX SURPLUS"
+                   }
+                  }
+                 },
+                 {
+                  "Tax": {
+                   "Amount": {
+                    "Code": "EUR",
+                    "data": "1203"
+                   },
+                   "Nation": {
+                    "data": "FR"
+                   },
+                   "TaxCode": {
+                    "data": "QX"
+                   },
+                   "LocalAmount": {
+                    "Code": "EUR",
+                    "data": "1203"
+                   },
+                   "Description": {
+                    "data": "PASSENGER SERVICE CHARGE INTERNATIONAL"
+                   }
+                  }
+                 }
+                ]
+               }
+              }
+             },
+             "FareBasis": {
+              "FareBasisCode": {
+               "refs": "FG1",
+               "Code": {
+                "data": "P05BUZP9"
+               }
+              },
+              "RBD": {
+               "data": "P P"
+              },
+              "CabinType": {
+               "CabinTypeCode": {
+                "data": "C C"
+               },
+               "CabinTypeName": {
+                "data": "Business Business"
+               }
+              }
+             },
+             "TicketDesig": {
+              "data": "Y"
+             },
+             "FareRules": {
+              "Penalty": {
+               "RefundableInd": "true",
+               "CancelFeeInd": "false",
+               "ChangeFeeInd": "false",
+               "Details": {
+                "array": [
+                 {
+                  "Detail": {
+                   "refs": "RM97C30AC8",
+                   "Type": {
+                    "data": "Change"
+                   }
+                  }
+                 },
+                 {
+                  "Detail": {
+                   "refs": "RMBD89889E",
+                   "Type": {
+                    "data": "Cancel"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              "AdvanceStay": {
+               "AdvancePurchase": {
+                "Context": "LATEST",
+                "data": "P5D"
+               },
+               "AdvanceTicketing": {
+                "AdvanceReservation": {
+                 "Context": "EARLIEST",
+                 "data": "P5D"
+                },
+                "AdvanceDeparture": {
+                 "Context": "LATEST",
+                 "data": "PT72H"
+                }
+               }
+              },
+              "Ticketing": {
+               "Endorsements": {
+                "Endorsement": {
+                 "data": "FARE RESTRICTION MAY APPLY"
+                }
+               }
+              }
+             },
+             "PriceClassRef": {
+              "data": "LHBusiness-1"
+             },
+             "SegmentRefs": {
+              "ON_Point": "CDG",
+              "OFF_Point": "MUC",
+              "data": "S2 S3"
+             }
+            },
+            "FlightMileage": {
+             "Value": {
+              "data": "465"
+             }
+            }
+           }
+          }
+         ],
+         "OrderItemID": "PoIPC98FD0C4-9C2F-4511-BCE7-1-1",
+         "Timestamp": "2021-07-06T07:37:00"
+        }
+       }
+      },
+      "DataLists": {
+       "PassengerList": {
+        "Passenger": {
+         "PassengerID": "T1",
+         "PTC": {
+          "data": "ADT"
+         },
+         "Birthdate": {
+          "data": "1980-01-01"
+         },
+         "Individual": {
+          "Birthdate": {
+           "data": "1980-01-01"
+          },
+          "Gender": {
+           "data": "Male"
+          },
+          "NameTitle": {
+           "data": "MR"
+          },
+          "GivenName": {
+           "data": "DAVE"
+          },
+          "Surname": {
+           "data": "DOE"
+          }
+         },
+         "ContactInfoRef": {
+          "data": "CI1"
+         }
+        }
+       },
+       "ContactList": {
+        "ContactInformation": {
+         "array": [
+          {
+           "ContactProvided": {
+            "Phone": {
+             "Label": {
+              "data": "Business"
+             },
+             "PhoneNumber": {
+              "data": "33600000001"
+             }
+            }
+           }
+          },
+          {
+           "ContactProvided": {
+            "EmailAddress": {
+             "Label": {
+              "data": "Operational"
+             },
+             "EmailAddressValue": {
+              "data": "ftheret@voyagexepert.fr"
+             }
+            }
+           }
+          },
+          {
+           "ContactProvided": {
+            "EmailAddress": {
+             "Label": {
+              "data": "Business"
+             },
+             "EmailAddressValue": {
+              "data": "info@voyagexepert.fr"
+             }
+            }
+           }
+          }
+         ],
+         "ContactID": "CI1"
+        }
+       },
+       "BagDisclosureList": {
+        "BagDisclosure": {
+         "ListKey": "BaggageKey-1",
+         "BagRule": {
+          "data": "N"
+         },
+         "Descriptions": {
+          "Description": {
+           "Text": {
+            "data": "Not subject to US DOT and CTA Reservation or Disclosure"
+           }
+          }
+         }
+        }
+       },
+       "BaggageAllowanceList": {
+        "array": [
+         {
+          "BaggageAllowance": {
+           "BaggageAllowanceID": "BA4C480BA3-CO",
+           "BaggageCategory": {
+            "data": "CarryOn"
+           },
+           "AllowanceDescription": {
+            "ApplicableParty": {
+             "data": "Traveler"
+            },
+            "Descriptions": {
+             "array": [
+              {
+               "Description": {
+                "Text": {
+                 "data": "CARRYON HAND BAGGAGE ALLOWANCE"
+                }
+               }
+              },
+              {
+               "Description": {
+                "Text": {
+                 "data": "CARRY8KG 18LB UPTO46LI 118LCM"
+                }
+               }
+              }
+             ]
+            }
+           },
+           "PieceAllowance": {
+            "ApplicableParty": {
+             "data": "Traveler"
+            },
+            "TotalQuantity": {
+             "data": "2"
+            },
+            "PieceMeasurements": {
+             "Quantity": "2"
+            }
+           },
+           "BaggageDeterminingCarrier": {
+            "AirlineID": {
+             "data": "LH"
+            }
+           }
+          }
+         },
+         {
+          "BaggageAllowance": {
+           "BaggageAllowanceID": "BA285DC125-CO",
+           "BaggageCategory": {
+            "data": "CarryOn"
+           },
+           "AllowanceDescription": {
+            "ApplicableParty": {
+             "data": "Traveler"
+            },
+            "Descriptions": {
+             "array": [
+              {
+               "Description": {
+                "Text": {
+                 "data": "CARRYON HAND BAGGAGE ALLOWANCE"
+                }
+               }
+              },
+              {
+               "Description": {
+                "Text": {
+                 "data": "CARRY8KG 18LB UPTO46LI 118LCM"
+                }
+               }
+              }
+             ]
+            }
+           },
+           "PieceAllowance": {
+            "ApplicableParty": {
+             "data": "Traveler"
+            },
+            "TotalQuantity": {
+             "data": "2"
+            },
+            "PieceMeasurements": {
+             "Quantity": "2"
+            }
+           },
+           "BaggageDeterminingCarrier": {
+            "AirlineID": {
+             "data": "LH"
+            }
+           }
+          }
+         },
+         {
+          "BaggageAllowance": {
+           "BaggageAllowanceID": "BA70830732",
+           "BaggageCategory": {
+            "data": "Checked"
+           },
+           "AllowanceDescription": {
+            "Concept": "Piece",
+            "ApplicableParty": {
+             "data": "Traveler"
+            },
+            "Descriptions": {
+             "Description": {
+              "Text": {
+               "data": "CHECKED ALLOWANCE"
+              }
+             }
+            }
+           },
+           "PieceAllowance": {
+            "ApplicableParty": {
+             "data": "Traveler"
+            },
+            "TotalQuantity": {
+             "data": "2"
+            },
+            "PieceMeasurements": {
+             "array": [
+              {
+               "PieceWeightAllowance": {
+                "array": [
+                 {
+                  "MaximumWeight": {
+                   "Value": {
+                    "data": "32.0"
+                   },
+                   "UOM": {
+                    "data": "KG"
+                   }
+                  }
+                 },
+                 {
+                  "MaximumWeight": {
+                   "Value": {
+                    "data": "70.0"
+                   },
+                   "UOM": {
+                    "data": "LBS"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "PieceDimensionAllowance": {
+                "DimensionUOM": {
+                 "data": "Centimeter"
+                },
+                "Dimensions": {
+                 "Category": {
+                  "data": "Length"
+                 },
+                 "MaxValue": {
+                  "data": "158.0"
+                 }
+                }
+               }
+              },
+              {
+               "PieceDimensionAllowance": {
+                "DimensionUOM": {
+                 "data": "Inch"
+                },
+                "Dimensions": {
+                 "Category": {
+                  "data": "Length"
+                 },
+                 "MaxValue": {
+                  "data": "62.0"
+                 }
+                }
+               }
+              }
+             ],
+             "Quantity": "2"
+            }
+           },
+           "BaggageDeterminingCarrier": {
+            "AirlineID": {
+             "data": "LH"
+            }
+           }
+          }
+         }
+        ]
+       },
+       "FareList": {
+        "FareGroup": {
+         "ListKey": "FG1",
+         "refs": "FRK7788CFB1",
+         "Fare": {
+          "FareCode": {
+           "data": "70J"
+          }
+         },
+         "FareBasisCode": {
+          "Code": {
+           "data": "P05BUZP9"
+          }
+         }
+        }
+       },
+       "FlightSegmentList": {
+        "array": [
+         {
+          "FlightSegment": {
+           "SegmentKey": "S2",
+           "ConnectInd": "true",
+           "ElectronicTicketInd": "true",
+           "SecureFlight": "false",
+           "Departure": {
+            "AirportCode": {
+             "data": "CDG"
+            },
+            "Date": {
+             "data": "2021-07-25"
+            },
+            "Time": {
+             "data": "18:25"
+            },
+            "AirportName": {
+             "data": "Paris Charles de Gaulle Apt, FR"
+            },
+            "Terminal": {
+             "Name": {
+              "data": "2B"
+             }
+            }
+           },
+           "Arrival": {
+            "AirportCode": {
+             "data": "FRA"
+            },
+            "Date": {
+             "data": "2021-07-25"
+            },
+            "Time": {
+             "data": "19:35"
+            },
+            "AirportName": {
+             "data": "Frankfurt International Apt, DE"
+            },
+            "Terminal": {
+             "Name": {
+              "data": "1"
+             }
+            }
+           },
+           "MarketingCarrier": {
+            "AirlineID": {
+             "data": "LH"
+            },
+            "Name": {
+             "data": "Deutsche Lufthansa AG"
+            },
+            "FlightNumber": {
+             "data": "1041"
+            }
+           },
+           "Equipment": {
+            "AircraftCode": {
+             "data": "32N"
+            },
+            "Name": {
+             "data": "Airbus A320neo"
+            }
+           },
+           "ClassOfService": {
+            "Code": {
+             "data": "P"
+            }
+           },
+           "FlightDetail": {
+            "FlightDistance": {
+             "Value": {
+              "data": "279"
+             },
+             "UOM": {
+              "data": "Miles"
+             }
+            },
+            "FlightDuration": {
+             "Value": {
+              "data": "PT1H10M"
+             }
+            },
+            "Stops": {
+             "StopQuantity": {
+              "data": "0"
+             }
+            },
+            "ResDateTime": {
+             "Date": {
+              "time": "11:37",
+              "data": "2021-07-06"
+             }
+            }
+           }
+          }
+         },
+         {
+          "FlightSegment": {
+           "SegmentKey": "S3",
+           "ElectronicTicketInd": "true",
+           "SecureFlight": "false",
+           "Departure": {
+            "AirportCode": {
+             "data": "FRA"
+            },
+            "Date": {
+             "data": "2021-07-25"
+            },
+            "Time": {
+             "data": "21:15"
+            },
+            "AirportName": {
+             "data": "Frankfurt International Apt, DE"
+            },
+            "Terminal": {
+             "Name": {
+              "data": "1"
+             }
+            }
+           },
+           "Arrival": {
+            "AirportCode": {
+             "data": "MUC"
+            },
+            "Date": {
+             "data": "2021-07-25"
+            },
+            "Time": {
+             "data": "22:10"
+            },
+            "AirportName": {
+             "data": "Munich International Airport, DE"
+            },
+            "Terminal": {
+             "Name": {
+              "data": "2"
+             }
+            }
+           },
+           "MarketingCarrier": {
+            "AirlineID": {
+             "data": "LH"
+            },
+            "Name": {
+             "data": "Deutsche Lufthansa AG"
+            },
+            "FlightNumber": {
+             "data": "122"
+            }
+           },
+           "Equipment": {
+            "AircraftCode": {
+             "data": "32A"
+            },
+            "Name": {
+             "data": "Airbus A320 -Sharklets-"
+            }
+           },
+           "ClassOfService": {
+            "Code": {
+             "data": "P"
+            }
+           },
+           "FlightDetail": {
+            "FlightDistance": {
+             "Value": {
+              "data": "186"
+             },
+             "UOM": {
+              "data": "Miles"
+             }
+            },
+            "FlightDuration": {
+             "Value": {
+              "data": "PT0H55M"
+             }
+            },
+            "Stops": {
+             "StopQuantity": {
+              "data": "0"
+             }
+            },
+            "ResDateTime": {
+             "Date": {
+              "time": "11:37",
+              "data": "2021-07-06"
+             }
+            }
+           }
+          }
+         }
+        ]
+       },
+       "FlightList": {
+        "Flight": {
+         "FlightKey": "F1",
+         "SegmentReferences": {
+          "OnPoint": "CDG",
+          "OffPoint": "MUC",
+          "data": "S2 S3"
+         }
+        }
+       },
+       "OriginDestinationList": {
+        "OriginDestination": {
+         "OriginDestinationKey": "O1",
+         "DepartureCode": {
+          "data": "CDG"
+         },
+         "ArrivalCode": {
+          "data": "MUC"
+         },
+         "FlightReferences": {
+          "OnPoint": "CDG",
+          "OffPoint": "MUC",
+          "data": "F1"
+         }
+        }
+       },
+       "InstructionsList": {
+        "array": [
+         {
+          "Instruction": {
+           "ListKey": "I2",
+           "FreeFormTextInstruction": {
+            "refs": "S2",
+            "Remark": {
+             "data": "PLS ADD PAX MOBILE CTC FOR IRREG COMMUNICATION"
+            }
+           }
+          }
+         },
+         {
+          "Instruction": {
+           "ListKey": "I3",
+           "FreeFormTextInstruction": {
+            "refs": "S3",
+            "Remark": {
+             "data": "PLS ADD PAX MOBILE CTC FOR IRREG COMMUNICATION"
+            }
+           }
+          }
+         }
+        ]
+       },
+       "PriceClassList": {
+        "PriceClass": {
+         "PriceClassID": "LHBusiness-1",
+         "Name": {
+          "data": "Business"
+         },
+         "Code": {
+          "data": "BUZ00"
+         }
+        }
+       },
+       "ServiceDefinitionList": {
+        "array": [
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-BLG",
+           "Name": {
+            "data": "Business Class Lounge"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "BLG"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "Business Class Lounge"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-MNB",
+           "Name": {
+            "data": "Meal and Beverages"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "MNB"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "Meal and Beverages"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-SEA",
+           "Name": {
+            "data": "Empty Middle Seat"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "SEA"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "Empty Middle Seat"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-MAG",
+           "Name": {
+            "data": "e-Magazines / e-Newspapers"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "MAG"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "e-Magazines / e-Newspapers"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-0LW",
+           "Name": {
+            "data": "Priority Security if available"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "0LW"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "Priority Security if available"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-050",
+           "Name": {
+            "data": "Seat Reservation"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "050"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "Seat Reservation"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "A-OC-057",
+           "Name": {
+            "data": "MILEAGE ACCRUAL"
+           },
+           "Encoding": {
+            "RFIC": {
+             "data": "A"
+            },
+            "Type": {
+             "data": "1"
+            },
+            "Code": {
+             "data": "OC"
+            },
+            "SubCode": {
+             "data": "057"
+            }
+           },
+           "FeeMethod": {
+            "data": "OC"
+           },
+           "Descriptions": {
+            "array": [
+             {
+              "Description": {
+               "Text": {
+                "data": "MILEAGE ACCRUAL"
+               },
+               "Application": {
+                "data": "Details"
+               }
+              }
+             },
+             {
+              "Description": {
+               "Text": {
+                "data": "Included"
+               },
+               "Application": {
+                "data": "Type"
+               }
+              }
+             }
+            ]
+           },
+           "Settlement": {
+            "Method": {
+             "data": "F"
+            }
+           },
+           "BookingInstructions": {
+            "Method": {
+             "data": "API"
+            }
+           },
+           "ValidatingCarrier": {
+            "data": "LH"
+           },
+           "Detail": {
+            "ServiceCoupon": {
+             "CouponType": {
+              "data": "F"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "BASRV374CBA69-CO",
+           "Name": {
+            "data": "Carry On Bag Allowance"
+           },
+           "BaggageAllowanceRef": {
+            "data": "BA4C480BA3-CO"
+           },
+           "Descriptions": {
+            "Description": {
+             "Text": {
+              "data": "Carry On Bag Allowance"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "BASRV78EBAAF4-CO",
+           "Name": {
+            "data": "Carry On Bag Allowance"
+           },
+           "BaggageAllowanceRef": {
+            "data": "BA285DC125-CO"
+           },
+           "Descriptions": {
+            "Description": {
+             "Text": {
+              "data": "Carry On Bag Allowance"
+             }
+            }
+           }
+          }
+         },
+         {
+          "ServiceDefinition": {
+           "ServiceDefinitionID": "BASRVE61FF944",
+           "Name": {
+            "data": "Checked Bag Allowance"
+           },
+           "BaggageAllowanceRef": {
+            "data": "BA70830732"
+           },
+           "Descriptions": {
+            "Description": {
+             "Text": {
+              "data": "Checked Bag Allowance"
+             }
+            }
+           }
+          }
+         }
+        ]
+       }
+      },
+      "Metadata": {
+       "array": [
+        {
+         "PassengerMetadata": {
+          "MetadataKey": "M2",
+          "AugmentationPoint": {
+           "AugPoint": {
+            "OtherServiceInformation": {
+             "xmlns": "http://ndc.farelogix.com/aug",
+             "AirlineCode": {
+              "data": "YY"
+             },
+             "Text": {
+              "data": "FLJ BUJ"
+             }
+            }
+           }
+          }
+         }
+        },
+        {
+         "PassengerMetadata": {
+          "MetadataKey": "M1",
+          "AugmentationPoint": {
+           "AugPoint": {
+            "OtherServiceInformation": {
+             "xmlns": "http://ndc.farelogix.com/aug",
+             "TravelerIDRef": {
+              "data": "T1"
+             },
+             "AirlineCode": {
+              "data": "LH"
+             },
+             "OSICode": {
+              "data": "CTCA"
+             },
+             "Text": {
+              "data": "123 STREET BILLING MIAMI FL 33160 US"
+             }
+            }
+           }
+          }
+         }
+        },
+        {
+         "PassengerMetadata": {
+          "MetadataKey": "M0",
+          "AugmentationPoint": {
+           "AugPoint": {
+            "SpecialServiceRequest": {
+             "xmlns": "http://ndc.farelogix.com/aug",
+             "AirlineCode": {
+              "data": "F1"
+             },
+             "SSRCode": {
+              "data": "OTHS"
+             },
+             "Text": {
+              "data": "PLS ADV TKT NBR BY 09JUL21/1137Z OR LH OPTG/MKTG FLTS WILL BE CANX / APPLIC FARE RULE APPLIES IF IT DEMANDS EARLIER TKTG"
+             }
+            }
+           }
+          }
+         }
+        },
+        {
+         "Other": {
+          "array": [
+           {
+            "OtherMetadata": {
+             "CurrencyMetadatas": {
+              "CurrencyMetadata": {
+               "MetadataKey": "EUR",
+               "Decimals": {
+                "data": "2"
+               }
+              }
+             }
+            }
+           },
+           {
+            "OtherMetadata": {
+             "PriceMetadatas": {
+              "array": [
+               {
+                "PriceMetadata": {
+                 "MetadataKey": "FRK7788CFB1",
+                 "AugmentationPoint": {
+                  "AugPoint": {
+                   "FareRefKey": {
+                    "xmlns": "http://ndc.farelogix.com/aug",
+                    "data": "pB8KF+pN8O?Q*qB9KTA+DB8O.4@TXO7+AW80017+MB80.037*CA96514*SN9NT@K*QL9XACT*QM93/./*Q/9@Q*NP91+NW8@BS*Q@96/*CR9/0.//+RL83421+AA855+DC8N@+?L8030./*BS9CTP+PS8/00*ER900*QP92+?Q8865~h9DAA~IYz o_w 9 @BS + rcfkdlsq!8Zy!gc 9 H/!*!daa!8!N/3ASYN8 + ``rBhqbmtls 9 03/,/.!*!db 9/~i*z hb!8!G1 + e`b 9 O.4@TXO7!*!_aqCgransmr!8!/4.-./ + ea!80~i]~i]~J9DKVO*flxKey"
+                   }
+                  }
+                 }
+                }
+               },
+               {
+                "PriceMetadata": {
+                 "MetadataKey": "FCPI009C1B15",
+                 "AugmentationPoint": {
+                  "AugPoint": {
+                   "FareCodePriceIndicator": {
+                    "xmlns": "http://ndc.farelogix.com/aug",
+                    "data": "A"
+                   }
+                  }
+                 }
+                }
+               }
+              ]
+             }
+            }
+           },
+           {
+            "OtherMetadata": {
+             "RuleMetadatas": {
+              "array": [
+               {
+                "RuleMetadata": {
+                 "MetadataKey": "RM97C30AC8",
+                 "RuleID": {
+                  "data": "Change"
+                 },
+                 "Values": {
+                  "Value": {
+                   "Instruction": {
+                    "data": "Allowed"
+                   }
+                  }
+                 }
+                }
+               },
+               {
+                "RuleMetadata": {
+                 "MetadataKey": "RMBD89889E",
+                 "RuleID": {
+                  "data": "Cancel"
+                 },
+                 "Values": {
+                  "Value": {
+                   "Instruction": {
+                    "data": "Allowed"
+                   }
+                  }
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    }
+   }
+  },
+  "DataOut": {
+   "Order": {
+    "OrderID": "LH22094CFF0A3",
+    "Owner": "LH",
+    "BookingReferences": {
+     "array": [
+      {
+       "BookingReference": {
+        "ID": {
+         "data": "RFUTWU"
+        },
+        "OtherID": {
+         "data": "F1"
+        }
+       }
+      },
+      {
+       "BookingReference": {
+        "ID": {
+         "data": "UKO9CA"
+        },
+        "AirlineID": {
+         "Name": "Lufthansa",
+         "data": "LH"
+        }
+       }
+      }
+     ]
+    },
+    "TotalOrderPrice": {
+     "DetailCurrencyPrice": {
+      "Total": {
+       "Code": "EUR",
+       "data": "16749"
+      }
+     }
+    },
+    "OrderItems": {
+     "OrderItem": {
+      "array": [
+       {
+        "PriceDetail": {
+         "TotalAmount": {
+          "DetailCurrencyPrice": {
+           "Total": {
+            "Code": "EUR",
+            "data": "16749"
+           }
+          }
+         },
+         "BaseAmount": {
+          "Code": "EUR",
+          "data": "100"
+         },
+         "Taxes": {
+          "Total": {
+           "Code": "EUR",
+           "data": "16649"
+          }
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV1-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-BLG"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV2-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-BLG"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV3-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-MNB"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV4-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-MNB"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV5-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-SEA"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV6-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-SEA"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV7-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-MAG"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV8-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-MAG"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV9-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-0LW"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV10-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-0LW"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV11-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-050"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV12-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-050"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV13-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "A-OC-057"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "INCLUDEDSRV14-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "A-OC-057"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "BAGGAGESRV1-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "BASRVE61FF944"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "BAGGAGESRV2-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "BASRVE61FF944"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "BAGGAGESRV3-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S3",
+          "data": "BASRV78EBAAF4-CO"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "BAGGAGESRV4-T1",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "ServiceDefinitionRef": {
+          "SegmentRef": "S2",
+          "data": "BASRV374CBA69-CO"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "SRV1-T1-S2",
+         "ServiceStatus": "HK",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "SegmentRef": {
+          "data": "S2"
+         }
+        }
+       },
+       {
+        "Service": {
+         "ServiceID": "SRV1-T1-S3",
+         "ServiceStatus": "HK",
+         "PassengerRef": {
+          "data": "T1"
+         },
+         "SegmentRef": {
+          "data": "S3"
+         }
+        }
+       },
+       {
+        "TimeLimits": {
+         "PaymentTimeLimit": {
+          "Timestamp": "2021-07-09T13:37:00"
+         },
+         "TicketingTimeLimits": {
+          "Timestamp": "2021-07-09T13:37:00"
+         }
+        }
+       },
+       {
+        "FareDetail": {
+         "FareIndicatorCode": {
+          "data": "4"
+         },
+         "PassengerRefs": {
+          "data": "T1"
+         },
+         "Price": {
+          "TotalAmount": {
+           "DetailCurrencyPrice": {
+            "Total": {
+             "Code": "EUR",
+             "data": "16749"
+            }
+           }
+          },
+          "BaseAmount": {
+           "Code": "EUR",
+           "data": "100"
+          },
+          "Taxes": {
+           "Total": {
+            "Code": "EUR",
+            "data": "16649"
+           },
+           "Breakdown": {
+            "array": [
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "4800"
+               },
+               "TaxCode": {
+                "data": "YQ"
+               },
+               "CollectionPoint": {
+                "CurrCode": {
+                 "NumberOfDecimals": "2",
+                 "data": "EUR"
+                },
+                "AirportAmount": {
+                 "data": "4800"
+                },
+                "AirportCode": {
+                 "data": "CDG"
+                }
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "4800"
+               },
+               "Description": {
+                "data": "YQI LH CARRIER IMPOSED MISC FEE"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "4800"
+               },
+               "TaxCode": {
+                "data": "YQ"
+               },
+               "CollectionPoint": {
+                "CurrCode": {
+                 "NumberOfDecimals": "2",
+                 "data": "EUR"
+                },
+                "AirportAmount": {
+                 "data": "4800"
+                },
+                "AirportCode": {
+                 "data": "FRA"
+                }
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "4800"
+               },
+               "Description": {
+                "data": "YQI LH CARRIER IMPOSED MISC FEE"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "2183"
+               },
+               "Nation": {
+                "data": "DE"
+               },
+               "TaxCode": {
+                "data": "RD"
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "2183"
+               },
+               "Description": {
+                "data": "PASSENGER SERVICE CHARGE DOMESTIC DEPARTURE"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "466"
+               },
+               "Nation": {
+                "data": "FR"
+               },
+               "TaxCode": {
+                "data": "FR"
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "466"
+               },
+               "Description": {
+                "data": "CIVIL AVIATION TAX DOMESTIC AND INTERNATIONAL"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "1170"
+               },
+               "Nation": {
+                "data": "FR"
+               },
+               "TaxCode": {
+                "data": "FR"
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "1170"
+               },
+               "Description": {
+                "data": "AIRPORT TAX DOMESTIC AND INTERNATIONAL"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "1127"
+               },
+               "Nation": {
+                "data": "FR"
+               },
+               "TaxCode": {
+                "data": "IZ"
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "1127"
+               },
+               "Description": {
+                "data": "AIR PASSENGER SOLIDARITY TAX"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "900"
+               },
+               "Nation": {
+                "data": "FR"
+               },
+               "TaxCode": {
+                "data": "O4"
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "900"
+               },
+               "Description": {
+                "data": "AIR PASSENGER SOLIDARITY TAX SURPLUS"
+               }
+              }
+             },
+             {
+              "Tax": {
+               "RefundInd": "true",
+               "Amount": {
+                "Code": "EUR",
+                "data": "1203"
+               },
+               "Nation": {
+                "data": "FR"
+               },
+               "TaxCode": {
+                "data": "QX"
+               },
+               "LocalAmount": {
+                "Code": "EUR",
+                "data": "1203"
+               },
+               "Description": {
+                "data": "PASSENGER SERVICE CHARGE INTERNATIONAL"
+               }
+              }
+             }
+            ]
+           }
+          }
+         },
+         "FareComponent": {
+          "Price": {
+           "TotalAmount": {
+            "DetailCurrencyPrice": {
+             "Total": {
+              "Code": "EUR",
+              "data": "16749"
+             }
+            }
+           },
+           "BaseAmount": {
+            "Code": "EUR",
+            "data": "100"
+           },
+           "Taxes": {
+            "Total": {
+             "Code": "EUR",
+             "data": "16649"
+            },
+            "Breakdown": {
+             "array": [
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "4800"
+                },
+                "TaxCode": {
+                 "data": "YQ"
+                },
+                "CollectionPoint": {
+                 "CurrCode": {
+                  "NumberOfDecimals": "2",
+                  "data": "EUR"
+                 },
+                 "AirportAmount": {
+                  "data": "4800"
+                 },
+                 "AirportCode": {
+                  "data": "CDG"
+                 }
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "4800"
+                },
+                "Description": {
+                 "data": "YQI LH CARRIER IMPOSED MISC FEE"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "4800"
+                },
+                "TaxCode": {
+                 "data": "YQ"
+                },
+                "CollectionPoint": {
+                 "CurrCode": {
+                  "NumberOfDecimals": "2",
+                  "data": "EUR"
+                 },
+                 "AirportAmount": {
+                  "data": "4800"
+                 },
+                 "AirportCode": {
+                  "data": "FRA"
+                 }
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "4800"
+                },
+                "Description": {
+                 "data": "YQI LH CARRIER IMPOSED MISC FEE"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "2183"
+                },
+                "Nation": {
+                 "data": "DE"
+                },
+                "TaxCode": {
+                 "data": "RD"
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "2183"
+                },
+                "Description": {
+                 "data": "PASSENGER SERVICE CHARGE DOMESTIC DEPARTURE"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "466"
+                },
+                "Nation": {
+                 "data": "FR"
+                },
+                "TaxCode": {
+                 "data": "FR"
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "466"
+                },
+                "Description": {
+                 "data": "CIVIL AVIATION TAX DOMESTIC AND INTERNATIONAL"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "1170"
+                },
+                "Nation": {
+                 "data": "FR"
+                },
+                "TaxCode": {
+                 "data": "FR"
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "1170"
+                },
+                "Description": {
+                 "data": "AIRPORT TAX DOMESTIC AND INTERNATIONAL"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "1127"
+                },
+                "Nation": {
+                 "data": "FR"
+                },
+                "TaxCode": {
+                 "data": "IZ"
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "1127"
+                },
+                "Description": {
+                 "data": "AIR PASSENGER SOLIDARITY TAX"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "900"
+                },
+                "Nation": {
+                 "data": "FR"
+                },
+                "TaxCode": {
+                 "data": "O4"
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "900"
+                },
+                "Description": {
+                 "data": "AIR PASSENGER SOLIDARITY TAX SURPLUS"
+                }
+               }
+              },
+              {
+               "Tax": {
+                "Amount": {
+                 "Code": "EUR",
+                 "data": "1203"
+                },
+                "Nation": {
+                 "data": "FR"
+                },
+                "TaxCode": {
+                 "data": "QX"
+                },
+                "LocalAmount": {
+                 "Code": "EUR",
+                 "data": "1203"
+                },
+                "Description": {
+                 "data": "PASSENGER SERVICE CHARGE INTERNATIONAL"
+                }
+               }
+              }
+             ]
+            }
+           }
+          },
+          "FareBasis": {
+           "FareBasisCode": {
+            "refs": "FG1",
+            "Code": {
+             "data": "P05BUZP9"
+            }
+           },
+           "RBD": {
+            "data": "P P"
+           },
+           "CabinType": {
+            "CabinTypeCode": {
+             "data": "C C"
+            },
+            "CabinTypeName": {
+             "data": "Business Business"
+            }
+           }
+          },
+          "TicketDesig": {
+           "data": "Y"
+          },
+          "FareRules": {
+           "Penalty": {
+            "RefundableInd": "true",
+            "CancelFeeInd": "false",
+            "ChangeFeeInd": "false",
+            "Details": {
+             "array": [
+              {
+               "Detail": {
+                "refs": "RM97C30AC8",
+                "Type": {
+                 "data": "Change"
+                }
+               }
+              },
+              {
+               "Detail": {
+                "refs": "RMBD89889E",
+                "Type": {
+                 "data": "Cancel"
+                }
+               }
+              }
+             ]
+            }
+           },
+           "AdvanceStay": {
+            "AdvancePurchase": {
+             "Context": "LATEST",
+             "data": "P5D"
+            },
+            "AdvanceTicketing": {
+             "AdvanceReservation": {
+              "Context": "EARLIEST",
+              "data": "P5D"
+             },
+             "AdvanceDeparture": {
+              "Context": "LATEST",
+              "data": "PT72H"
+             }
+            }
+           },
+           "Ticketing": {
+            "Endorsements": {
+             "Endorsement": {
+              "data": "FARE RESTRICTION MAY APPLY"
+             }
+            }
+           }
+          },
+          "PriceClassRef": {
+           "data": "LHBusiness-1"
+          },
+          "SegmentRefs": {
+           "ON_Point": "CDG",
+           "OFF_Point": "MUC",
+           "data": "S2 S3"
+          }
+         },
+         "FlightMileage": {
+          "Value": {
+           "data": "465"
+          }
+         }
+        }
+       }
+      ],
+      "OrderItemID": "PoIPC98FD0C4-9C2F-4511-BCE7-1-1",
+      "Timestamp": "2021-07-06T07:37:00"
+     }
+    }
+   },
+   "DataLists": {
+    "PassengerList": {
+     "Passenger": {
+      "PassengerID": "T1",
+      "PTC": {
+       "data": "ADT"
+      },
+      "Birthdate": {
+       "data": "1980-01-01"
+      },
+      "Individual": {
+       "Birthdate": {
+        "data": "1980-01-01"
+       },
+       "Gender": {
+        "data": "Male"
+       },
+       "NameTitle": {
+        "data": "MR"
+       },
+       "GivenName": {
+        "data": "DAVE"
+       },
+       "Surname": {
+        "data": "DOE"
+       }
+      },
+      "ContactInfoRef": {
+       "data": "CI1"
+      }
+     }
+    },
+    "ContactList": {
+     "ContactInformation": {
+      "array": [
+       {
+        "ContactProvided": {
+         "Phone": {
+          "Label": {
+           "data": "Business"
+          },
+          "PhoneNumber": {
+           "data": "33600000001"
+          }
+         }
+        }
+       },
+       {
+        "ContactProvided": {
+         "EmailAddress": {
+          "Label": {
+           "data": "Operational"
+          },
+          "EmailAddressValue": {
+           "data": "ftheret@voyagexepert.fr"
+          }
+         }
+        }
+       },
+       {
+        "ContactProvided": {
+         "EmailAddress": {
+          "Label": {
+           "data": "Business"
+          },
+          "EmailAddressValue": {
+           "data": "info@voyagexepert.fr"
+          }
+         }
+        }
+       }
+      ],
+      "ContactID": "CI1"
+     }
+    },
+    "BagDisclosureList": {
+     "BagDisclosure": {
+      "ListKey": "BaggageKey-1",
+      "BagRule": {
+       "data": "N"
+      },
+      "Descriptions": {
+       "Description": {
+        "Text": {
+         "data": "Not subject to US DOT and CTA Reservation or Disclosure"
+        }
+       }
+      }
+     }
+    },
+    "BaggageAllowanceList": {
+     "array": [
+      {
+       "BaggageAllowance": {
+        "BaggageAllowanceID": "BA4C480BA3-CO",
+        "BaggageCategory": {
+         "data": "CarryOn"
+        },
+        "AllowanceDescription": {
+         "ApplicableParty": {
+          "data": "Traveler"
+         },
+         "Descriptions": {
+          "array": [
+           {
+            "Description": {
+             "Text": {
+              "data": "CARRYON HAND BAGGAGE ALLOWANCE"
+             }
+            }
+           },
+           {
+            "Description": {
+             "Text": {
+              "data": "CARRY8KG 18LB UPTO46LI 118LCM"
+             }
+            }
+           }
+          ]
+         }
+        },
+        "PieceAllowance": {
+         "ApplicableParty": {
+          "data": "Traveler"
+         },
+         "TotalQuantity": {
+          "data": "2"
+         },
+         "PieceMeasurements": {
+          "Quantity": "2"
+         }
+        },
+        "BaggageDeterminingCarrier": {
+         "AirlineID": {
+          "data": "LH"
+         }
+        }
+       }
+      },
+      {
+       "BaggageAllowance": {
+        "BaggageAllowanceID": "BA285DC125-CO",
+        "BaggageCategory": {
+         "data": "CarryOn"
+        },
+        "AllowanceDescription": {
+         "ApplicableParty": {
+          "data": "Traveler"
+         },
+         "Descriptions": {
+          "array": [
+           {
+            "Description": {
+             "Text": {
+              "data": "CARRYON HAND BAGGAGE ALLOWANCE"
+             }
+            }
+           },
+           {
+            "Description": {
+             "Text": {
+              "data": "CARRY8KG 18LB UPTO46LI 118LCM"
+             }
+            }
+           }
+          ]
+         }
+        },
+        "PieceAllowance": {
+         "ApplicableParty": {
+          "data": "Traveler"
+         },
+         "TotalQuantity": {
+          "data": "2"
+         },
+         "PieceMeasurements": {
+          "Quantity": "2"
+         }
+        },
+        "BaggageDeterminingCarrier": {
+         "AirlineID": {
+          "data": "LH"
+         }
+        }
+       }
+      },
+      {
+       "BaggageAllowance": {
+        "BaggageAllowanceID": "BA70830732",
+        "BaggageCategory": {
+         "data": "Checked"
+        },
+        "AllowanceDescription": {
+         "Concept": "Piece",
+         "ApplicableParty": {
+          "data": "Traveler"
+         },
+         "Descriptions": {
+          "Description": {
+           "Text": {
+            "data": "CHECKED ALLOWANCE"
+           }
+          }
+         }
+        },
+        "PieceAllowance": {
+         "ApplicableParty": {
+          "data": "Traveler"
+         },
+         "TotalQuantity": {
+          "data": "2"
+         },
+         "PieceMeasurements": {
+          "array": [
+           {
+            "PieceWeightAllowance": {
+             "array": [
+              {
+               "MaximumWeight": {
+                "Value": {
+                 "data": "32.0"
+                },
+                "UOM": {
+                 "data": "KG"
+                }
+               }
+              },
+              {
+               "MaximumWeight": {
+                "Value": {
+                 "data": "70.0"
+                },
+                "UOM": {
+                 "data": "LBS"
+                }
+               }
+              }
+             ]
+            }
+           },
+           {
+            "PieceDimensionAllowance": {
+             "DimensionUOM": {
+              "data": "Centimeter"
+             },
+             "Dimensions": {
+              "Category": {
+               "data": "Length"
+              },
+              "MaxValue": {
+               "data": "158.0"
+              }
+             }
+            }
+           },
+           {
+            "PieceDimensionAllowance": {
+             "DimensionUOM": {
+              "data": "Inch"
+             },
+             "Dimensions": {
+              "Category": {
+               "data": "Length"
+              },
+              "MaxValue": {
+               "data": "62.0"
+              }
+             }
+            }
+           }
+          ],
+          "Quantity": "2"
+         }
+        },
+        "BaggageDeterminingCarrier": {
+         "AirlineID": {
+          "data": "LH"
+         }
+        }
+       }
+      }
+     ]
+    },
+    "FareList": {
+     "FareGroup": {
+      "ListKey": "FG1",
+      "refs": "FRK7788CFB1",
+      "Fare": {
+       "FareCode": {
+        "data": "70J"
+       }
+      },
+      "FareBasisCode": {
+       "Code": {
+        "data": "P05BUZP9"
+       }
+      }
+     }
+    },
+    "FlightSegmentList": {
+     "array": [
+      {
+       "FlightSegment": {
+        "SegmentKey": "S2",
+        "ConnectInd": "true",
+        "ElectronicTicketInd": "true",
+        "SecureFlight": "false",
+        "Departure": {
+         "AirportCode": {
+          "data": "CDG"
+         },
+         "Date": {
+          "data": "2021-07-25"
+         },
+         "Time": {
+          "data": "18:25"
+         },
+         "AirportName": {
+          "data": "Paris Charles de Gaulle Apt, FR"
+         },
+         "Terminal": {
+          "Name": {
+           "data": "2B"
+          }
+         }
+        },
+        "Arrival": {
+         "AirportCode": {
+          "data": "FRA"
+         },
+         "Date": {
+          "data": "2021-07-25"
+         },
+         "Time": {
+          "data": "19:35"
+         },
+         "AirportName": {
+          "data": "Frankfurt International Apt, DE"
+         },
+         "Terminal": {
+          "Name": {
+           "data": "1"
+          }
+         }
+        },
+        "MarketingCarrier": {
+         "AirlineID": {
+          "data": "LH"
+         },
+         "Name": {
+          "data": "Deutsche Lufthansa AG"
+         },
+         "FlightNumber": {
+          "data": "1041"
+         }
+        },
+        "Equipment": {
+         "AircraftCode": {
+          "data": "32N"
+         },
+         "Name": {
+          "data": "Airbus A320neo"
+         }
+        },
+        "ClassOfService": {
+         "Code": {
+          "data": "P"
+         }
+        },
+        "FlightDetail": {
+         "FlightDistance": {
+          "Value": {
+           "data": "279"
+          },
+          "UOM": {
+           "data": "Miles"
+          }
+         },
+         "FlightDuration": {
+          "Value": {
+           "data": "PT1H10M"
+          }
+         },
+         "Stops": {
+          "StopQuantity": {
+           "data": "0"
+          }
+         },
+         "ResDateTime": {
+          "Date": {
+           "time": "11:37",
+           "data": "2021-07-06"
+          }
+         }
+        }
+       }
+      },
+      {
+       "FlightSegment": {
+        "SegmentKey": "S3",
+        "ElectronicTicketInd": "true",
+        "SecureFlight": "false",
+        "Departure": {
+         "AirportCode": {
+          "data": "FRA"
+         },
+         "Date": {
+          "data": "2021-07-25"
+         },
+         "Time": {
+          "data": "21:15"
+         },
+         "AirportName": {
+          "data": "Frankfurt International Apt, DE"
+         },
+         "Terminal": {
+          "Name": {
+           "data": "1"
+          }
+         }
+        },
+        "Arrival": {
+         "AirportCode": {
+          "data": "MUC"
+         },
+         "Date": {
+          "data": "2021-07-25"
+         },
+         "Time": {
+          "data": "22:10"
+         },
+         "AirportName": {
+          "data": "Munich International Airport, DE"
+         },
+         "Terminal": {
+          "Name": {
+           "data": "2"
+          }
+         }
+        },
+        "MarketingCarrier": {
+         "AirlineID": {
+          "data": "LH"
+         },
+         "Name": {
+          "data": "Deutsche Lufthansa AG"
+         },
+         "FlightNumber": {
+          "data": "122"
+         }
+        },
+        "Equipment": {
+         "AircraftCode": {
+          "data": "32A"
+         },
+         "Name": {
+          "data": "Airbus A320 -Sharklets-"
+         }
+        },
+        "ClassOfService": {
+         "Code": {
+          "data": "P"
+         }
+        },
+        "FlightDetail": {
+         "FlightDistance": {
+          "Value": {
+           "data": "186"
+          },
+          "UOM": {
+           "data": "Miles"
+          }
+         },
+         "FlightDuration": {
+          "Value": {
+           "data": "PT0H55M"
+          }
+         },
+         "Stops": {
+          "StopQuantity": {
+           "data": "0"
+          }
+         },
+         "ResDateTime": {
+          "Date": {
+           "time": "11:37",
+           "data": "2021-07-06"
+          }
+         }
+        }
+       }
+      }
+     ]
+    },
+    "FlightList": {
+     "Flight": {
+      "FlightKey": "F1",
+      "SegmentReferences": {
+       "OnPoint": "CDG",
+       "OffPoint": "MUC",
+       "data": "S2 S3"
+      }
+     }
+    },
+    "OriginDestinationList": {
+     "OriginDestination": {
+      "OriginDestinationKey": "O1",
+      "DepartureCode": {
+       "data": "CDG"
+      },
+      "ArrivalCode": {
+       "data": "MUC"
+      },
+      "FlightReferences": {
+       "OnPoint": "CDG",
+       "OffPoint": "MUC",
+       "data": "F1"
+      }
+     }
+    },
+    "InstructionsList": {
+     "array": [
+      {
+       "Instruction": {
+        "ListKey": "I2",
+        "FreeFormTextInstruction": {
+         "refs": "S2",
+         "Remark": {
+          "data": "PLS ADD PAX MOBILE CTC FOR IRREG COMMUNICATION"
+         }
+        }
+       }
+      },
+      {
+       "Instruction": {
+        "ListKey": "I3",
+        "FreeFormTextInstruction": {
+         "refs": "S3",
+         "Remark": {
+          "data": "PLS ADD PAX MOBILE CTC FOR IRREG COMMUNICATION"
+         }
+        }
+       }
+      }
+     ]
+    },
+    "PriceClassList": {
+     "PriceClass": {
+      "PriceClassID": "LHBusiness-1",
+      "Name": {
+       "data": "Business"
+      },
+      "Code": {
+       "data": "BUZ00"
+      }
+     }
+    },
+    "ServiceDefinitionList": {
+     "array": [
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-BLG",
+        "Name": {
+         "data": "Business Class Lounge"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "BLG"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "Business Class Lounge"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-MNB",
+        "Name": {
+         "data": "Meal and Beverages"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "MNB"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "Meal and Beverages"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-SEA",
+        "Name": {
+         "data": "Empty Middle Seat"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "SEA"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "Empty Middle Seat"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-MAG",
+        "Name": {
+         "data": "e-Magazines / e-Newspapers"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "MAG"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "e-Magazines / e-Newspapers"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-0LW",
+        "Name": {
+         "data": "Priority Security if available"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "0LW"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "Priority Security if available"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-050",
+        "Name": {
+         "data": "Seat Reservation"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "050"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "Seat Reservation"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "A-OC-057",
+        "Name": {
+         "data": "MILEAGE ACCRUAL"
+        },
+        "Encoding": {
+         "RFIC": {
+          "data": "A"
+         },
+         "Type": {
+          "data": "1"
+         },
+         "Code": {
+          "data": "OC"
+         },
+         "SubCode": {
+          "data": "057"
+         }
+        },
+        "FeeMethod": {
+         "data": "OC"
+        },
+        "Descriptions": {
+         "array": [
+          {
+           "Description": {
+            "Text": {
+             "data": "MILEAGE ACCRUAL"
+            },
+            "Application": {
+             "data": "Details"
+            }
+           }
+          },
+          {
+           "Description": {
+            "Text": {
+             "data": "Included"
+            },
+            "Application": {
+             "data": "Type"
+            }
+           }
+          }
+         ]
+        },
+        "Settlement": {
+         "Method": {
+          "data": "F"
+         }
+        },
+        "BookingInstructions": {
+         "Method": {
+          "data": "API"
+         }
+        },
+        "ValidatingCarrier": {
+         "data": "LH"
+        },
+        "Detail": {
+         "ServiceCoupon": {
+          "CouponType": {
+           "data": "F"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "BASRV374CBA69-CO",
+        "Name": {
+         "data": "Carry On Bag Allowance"
+        },
+        "BaggageAllowanceRef": {
+         "data": "BA4C480BA3-CO"
+        },
+        "Descriptions": {
+         "Description": {
+          "Text": {
+           "data": "Carry On Bag Allowance"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "BASRV78EBAAF4-CO",
+        "Name": {
+         "data": "Carry On Bag Allowance"
+        },
+        "BaggageAllowanceRef": {
+         "data": "BA285DC125-CO"
+        },
+        "Descriptions": {
+         "Description": {
+          "Text": {
+           "data": "Carry On Bag Allowance"
+          }
+         }
+        }
+       }
+      },
+      {
+       "ServiceDefinition": {
+        "ServiceDefinitionID": "BASRVE61FF944",
+        "Name": {
+         "data": "Checked Bag Allowance"
+        },
+        "BaggageAllowanceRef": {
+         "data": "BA70830732"
+        },
+        "Descriptions": {
+         "Description": {
+          "Text": {
+           "data": "Checked Bag Allowance"
+          }
+         }
+        }
+       }
+      }
+     ]
+    }
+   },
+   "Metadata": {
+    "array": [
+     {
+      "PassengerMetadata": {
+       "MetadataKey": "M2",
+       "AugmentationPoint": {
+        "AugPoint": {
+         "OtherServiceInformation": {
+          "xmlns": "http://ndc.farelogix.com/aug",
+          "AirlineCode": {
+           "data": "YY"
+          },
+          "Text": {
+           "data": "FLJ BUJ"
+          }
+         }
+        }
+       }
+      }
+     },
+     {
+      "PassengerMetadata": {
+       "MetadataKey": "M1",
+       "AugmentationPoint": {
+        "AugPoint": {
+         "OtherServiceInformation": {
+          "xmlns": "http://ndc.farelogix.com/aug",
+          "TravelerIDRef": {
+           "data": "T1"
+          },
+          "AirlineCode": {
+           "data": "LH"
+          },
+          "OSICode": {
+           "data": "CTCA"
+          },
+          "Text": {
+           "data": "123 STREET BILLING MIAMI FL 33160 US"
+          }
+         }
+        }
+       }
+      }
+     },
+     {
+      "PassengerMetadata": {
+       "MetadataKey": "M0",
+       "AugmentationPoint": {
+        "AugPoint": {
+         "SpecialServiceRequest": {
+          "xmlns": "http://ndc.farelogix.com/aug",
+          "AirlineCode": {
+           "data": "F1"
+          },
+          "SSRCode": {
+           "data": "OTHS"
+          },
+          "Text": {
+           "data": "PLS ADV TKT NBR BY 09JUL21/1137Z OR LH OPTG/MKTG FLTS WILL BE CANX / APPLIC FARE RULE APPLIES IF IT DEMANDS EARLIER TKTG"
+          }
+         }
+        }
+       }
+      }
+     },
+     {
+      "Other": {
+       "array": [
+        {
+         "OtherMetadata": {
+          "CurrencyMetadatas": {
+           "CurrencyMetadata": {
+            "MetadataKey": "EUR",
+            "Decimals": {
+             "data": "2"
+            }
+           }
+          }
+         }
+        },
+        {
+         "OtherMetadata": {
+          "PriceMetadatas": {
+           "array": [
+            {
+             "PriceMetadata": {
+              "MetadataKey": "FRK7788CFB1",
+              "AugmentationPoint": {
+               "AugPoint": {
+                "FareRefKey": {
+                 "xmlns": "http://ndc.farelogix.com/aug",
+                 "data": "pB8KF+pN8O?Q*qB9KTA+DB8O.4@TXO7+AW80017+MB80.037*CA96514*SN9NT@K*QL9XACT*QM93/./*Q/9@Q*NP91+NW8@BS*Q@96/*CR9/0.//+RL83421+AA855+DC8N@+?L8030./*BS9CTP+PS8/00*ER900*QP92+?Q8865~h9DAA~IYz o_w 9 @BS + rcfkdlsq!8Zy!gc 9 H/!*!daa!8!N/3ASYN8 + ``rBhqbmtls 9 03/,/.!*!db 9/~i*z hb!8!G1 + e`b 9 O.4@TXO7!*!_aqCgransmr!8!/4.-./ + ea!80~i]~i]~J9DKVO*flxKey"
+                }
+               }
+              }
+             }
+            },
+            {
+             "PriceMetadata": {
+              "MetadataKey": "FCPI009C1B15",
+              "AugmentationPoint": {
+               "AugPoint": {
+                "FareCodePriceIndicator": {
+                 "xmlns": "http://ndc.farelogix.com/aug",
+                 "data": "A"
+                }
+               }
+              }
+             }
+            }
+           ]
+          }
+         }
+        },
+        {
+         "OtherMetadata": {
+          "RuleMetadatas": {
+           "array": [
+            {
+             "RuleMetadata": {
+              "MetadataKey": "RM97C30AC8",
+              "RuleID": {
+               "data": "Change"
+              },
+              "Values": {
+               "Value": {
+                "Instruction": {
+                 "data": "Allowed"
+                }
+               }
+              }
+             }
+            },
+            {
+             "RuleMetadata": {
+              "MetadataKey": "RMBD89889E",
+              "RuleID": {
+               "data": "Cancel"
+              },
+              "Values": {
+               "Value": {
+                "Instruction": {
+                 "data": "Allowed"
+                }
+               }
+              }
+             }
+            }
+           ]
+          }
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "Agency": {
+   "PseudoCity": "ASRR",
+   "AgencyID": "00110795"
+  },
+  "Vars": {
+   "TransactionControl.tc.app.version": "7.6.0",
+   "TransactionControl.tc.app.language": "fr-FR",
+   "TransactionControl.tc.app.string": "SOAP",
+   "TransactionControl.tc.iden.u": "ftherets2020",
+   "TransactionControl.tc.iden.p": "aH2XhW98AFhtgHg4v",
+   "TransactionControl.tc.iden.pseudocity": "ASRR",
+   "TransactionControl.tc.iden.agt": "9LJG2020",
+   "TransactionControl.tc.iden.agtpwd": "K6e2DjSQPvph",
+   "TransactionControl.tc.iden.agtrole": "Ticketing Agent",
+   "TransactionControl.tc.iden.agy": "00110795",
+   "TransactionControl.tc.agent.user": "xmlscn001",
+   "TransactionControl.tc.trace.string": "xmluser01",
+   "TransactionControl.tc.script.engine": "FLXDM",
+   "TransactionControl.tc.script.name": "voyagexpertlhg-dispatch.flxdm"
+  },
+  "Pointer": "TransactionControl.tc.script.name",
+  "Version": "17.2",
+  "Passengers": [
+   {
+    "Id": "T1",
+    "ContactID": "CID01",
+    "PTC": "ADT",
+    "Surname": "DOE",
+    "ResidenceCountryCode": "FR",
+    "Birthdate": "1980-01-01",
+    "Gender": "Male",
+    "NameTitle": "Mr",
+    "GivenName": "DAVE",
+    "Contact": {
+     "Address": {
+      "Label": "Home",
+      "Street": "123 STREET Billing",
+      "PostalCode": "33160",
+      "CityName": "MIAMI",
+      "CountrySubdivisionName": "FL",
+      "CountryCode": "US"
+     },
+     "Emails": [
+      {
+       "Label": "Operational",
+       "Address": "ftheret@voyagexepert.fr"
+      },
+      {
+       "Label": "Business",
+       "Address": "info@voyagexepert.fr"
+      }
+     ],
+     "Phones": [
+      {
+       "Label": "Business",
+       "CountryDialingCode": "33",
+       "Number": "600000001"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

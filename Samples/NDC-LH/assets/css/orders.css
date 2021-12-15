@@ -1,0 +1,194 @@
+body {
+    background-color : var(--main-surface-bgk-color);
+    color : var(--main-surface-txt-color);
+}
+
+.main__orders {
+    position :relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color : var(--main-standard-bgk-color);
+    color : var(--main-standard-txt-color);
+    /* left : calc(2.5% - 1rem); */
+    /* right : calc(2.5% - 1rem); */
+    /* top : calc(5% + 1rem); */
+    /* bottom : calc(5% - 1rem); */
+    /* border: 1px solid var(--main-surface-bgk-color); */
+    border-radius: 1rem;
+    /* margin : 1rem; */
+    /* padding : 1rem; */
+    height : 100%;
+    opacity: 1;
+    /* animation :cubic-bezier(0,1.12,.76,.99) 0.5s main_test_fadein; */
+    /* border : 1px solid var(--white); */
+}
+
+.order {
+    position : relative;
+    /* border-left : 1px solid var(--orange); */
+    /* border-right : 1px solid var(--orange); */
+    
+    border-radius: 0.25rem;
+    height : 2rem;
+    margin  : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+}
+/*
+.order 
+    > .order__details 
+{
+    border : 1px solid var(--white);
+    border-radius: 0.25rem;
+    height : 10%;
+    margin : 0.5rem 0.25rem;
+    padding : 0rem 0.25rem;
+}
+*/
+
+/** Reference */
+
+.order 
+   > .order__reference 
+{
+    font-size: 1.15rem;
+    position : absolute;
+    display: inline;
+    width : 13rem;
+    border-right : 1px solid var(--orange); 
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+    text-align: center;
+}
+
+.order 
+   > .order__reference 
+        > .order__number
+{
+    
+    display: inline;
+    /* border : 1px solid var(--green); */
+    width : 50%;
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+}
+
+.order 
+   > .order__reference 
+        > .order__owner
+{
+    
+    display: inline;
+    /* border : 1px solid var(--green); */
+    width : 50%;
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+}
+
+/** Departure */
+.order 
+   > .order__departure 
+{
+    font-size: 1.15rem;
+    position : absolute;
+    left : 14rem;
+    display: inline;
+    width : 13rem;
+    border-right : 1px solid var(--orange); 
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+    text-align: center;
+}
+
+.order 
+   > .order__departure 
+        > .order__departure__date
+{
+    
+    display: inline;
+    /* border : 1px solid var(--green); */
+    width : 50%;
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+}
+
+.order 
+   > .order__departure 
+        > .order__departure__airport
+{
+    
+    display: inline;
+    /* border : 1px solid var(--green); */
+    width : 50%;
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+}
+
+/** Passenger */
+.order 
+   > .order__passengers 
+{
+    font-size: 1.15rem;
+    position : absolute;
+    left : 28rem;
+    display: inline;
+    width : 15rem;
+    
+    /* border : 1px solid var(--orange); */
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+    text-align: center;
+}
+
+.order 
+   > .order__passengers 
+        > .input-standard
+{
+    padding : 0;
+    margin : -5px ;
+}
+
+.order 
+   > .order__passengers 
+        > .input-standard
+                > select 
+{
+    background-color: var(--chocolate);
+    color : var(--white);
+    padding : 0;
+    text-align: center;
+}
+
+/** Actions */
+
+.order 
+    > .order__actions
+{
+    font-size: 1.15rem;
+    position : absolute;
+    left : 44rem;
+    display: inline;
+    width : 66rem;
+    border-left : 1px solid var(--orange); 
+    /* border : 1px solid var(--orange); */
+    margin : 0rem 0.25rem;
+    padding : 0rem 0.25rem;
+    text-align: center;
+}
+
+.order 
+    > .order__actions {
+        padding : 0;
+        margin : 0;
+        text-align: center;
+}
+
+.order 
+    > .order__actions 
+        > button
+{
+        padding : 0 1rem;
+        margin : 0 1rem;
+        text-align: center;
+}
+    

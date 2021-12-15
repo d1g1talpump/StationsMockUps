@@ -1,0 +1,74 @@
+/**
+    Color Hex CODE
+    FCF7F8 => White
+    1C1F33 => Black
+    27233A => Chocolate
+    00916E => Green
+    B9314F => Red
+    357DED => Blue
+    E6CF6C => Yellow
+
+    Surface 
+        background : Black
+**/
+
+
+:root {
+    /* Define colors */
+    --white     : #FCF7F8;
+    --black     : #1C1F33;
+    --chocolate : #27233A;
+    --green     : #00916E;
+    --red       : #B9314F;
+    --blue      : #357DED;
+    --yellow    : #E6CF6C;
+    --orange    : #e9993d;
+
+    /* Define Schema */
+
+    /* layer 0 */
+    --main-surface-bgk-color   : var(--black);
+    --main-surface-txt-color  : var(--white);
+
+    /* */
+    --main-standard-bgk-color   : var(--chocolate);
+    --main-standard-txt-color : var(--white);
+    
+    /* menu */
+    --main-menu-bgk-color   : var(--chocolate);
+    --main-menu-txt-color : var(--white);
+
+    /* ancre */
+    --main-link-txt-color : var(--red);
+
+    /* input */
+    --main-button-bgk-color : var(--red);
+    --main-button-txt-color : var(--white);
+}
+
+.bgk-white { background-color:  var(--white);}
+.bgk-black { background-color:  var(--black);}
+.bgk-chocolate { background-color:  var(--chocolate);}
+.bgk-green { background-color:  var(--green);}
+.bgk-red { background-color:  var(--red);}
+.bgk-blue { background-color:  var(--blue);}
+.bgk-yellow { background-color:  var(--yellow);}
+.bgk-orange { background-color:  var(--orange);}
+
+.txt-white { color:  var(--white);}
+.txt-black { color:  var(--black);}
+.txt-chocolate { color:  var(--chocolate);}
+.txt-green { color:  var(--green);}
+.txt-red { color:  var(--red);}
+.txt-blue { color:  var(--blue);}
+.txt-yellow { color:  var(--yellow);}
+.txt-orange { color:  var(--orange);}
+
+.brd-white { border: 1px solid  var(--white);}
+.brd-black { border: 1px solid var(--black);}
+.brd-chocolate {border: 1px solid var(--chocolate);}
+.brd-green {border: 1px solid var(--green);}
+.brd-red { border: 1px solid var(--red);}
+.brd-blue { border: 1px solid var(--blue);}
+.brd-yellow { border: 1px solid var(--yellow);}
+.brd-orange { border: 1px solid var(--orange);}

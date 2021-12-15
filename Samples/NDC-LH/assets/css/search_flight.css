@@ -1,0 +1,313 @@
+body {
+    position : relative;
+    background-color : var(--main-surface-bgk-color);
+    color : var(--main-surface-txt-color);
+    overflow-y:scroll !important;
+}
+
+.main__default {
+    position : relative; 
+    background-color : var(--main-standard-bgk-color);
+    color : var(--main-standard-txt-color);
+    /* left : calc(2.5% - 1rem); */
+    /* right : calc(2.5% - 1rem); */
+    /* top : calc(5% + 1rem); */
+    /* bottom : calc(5% - 1rem); */
+    /* border: 1px solid var(--main-surface-bgk-color); */
+    border-radius: 1rem;
+    /* margin : 1rem; */
+    /* padding : 1rem; */
+    opacity: 1;
+    /* animation :cubic-bezier(0,1.12,.76,.99) 0.5s main_test_fadein; */
+    /* border : 1px solid var(--white); */
+    /* overflow-y:scroll; */
+}
+
+
+
+.passengers__list {
+    font-size: 1.5rem;
+    display: flex;
+    width : 100%;
+    height : 18rem;
+    background-color : var(--main-standard-bgk-color);
+    color : var(--main-standard-txt-color);
+    overflow-x: auto;
+    /* border: 1px solid var(--white);  */
+}
+
+.card__passenger{
+    cursor: pointer;
+}
+
+.card {
+    height : calc(100% - 2rem);
+    width  : calc(20rem + 2px);
+    margin : 1rem 1rem  1rem 1rem;
+    padding : 1rem 1rem 1rem 1rem ;
+    border-radius: 1rem;
+
+}
+
+
+.card__title {
+    /* background-color: var(--red); */
+    margin  : -1rem -1rem  -1rem -1rem;
+    padding : 0.25rem 1rem 0.25rem 1rem ;
+    border-radius: 1rem 1rem 0 0 ;
+}
+
+.card__content {
+    font-size:1.15rem;
+    margin  : 1rem 0rem 1rem -1rem;
+    background-color: var(--black);
+    width : 20rem;
+    height : calc(100% - 4px);
+    border-radius: 0 0 1rem 1rem  ;
+    padding : 0.25rem 1rem 0.25rem 1rem ;
+}
+
+
+
+.passenger__add{
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+    text-align: center;
+    vertical-align: middle;
+    /* background-color: var(--orange); */
+    height : 100%;
+}
+
+/** Search */
+.search__flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 10px; */
+    grid-auto-rows: minmax(100px, auto);
+    padding : 2rem 0;
+   
+}
+
+
+.main__search {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    /* display: inline; */
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width : 26rem;
+    background-color : var(--main-standard-bgk-color);
+    color : var(--main-standard-txt-color);
+    overflow-x: auto;
+    /* border: 1px solid var(--white);  */
+}
+
+/* View resultat */
+
+.main__resultat{
+    grid-column: 1/240;
+    grid-row: 1 / 3;
+    margin-left : 26rem;
+    background-color : var(--main-standard-bgk-color);
+    display: inline;
+    font-size: 1.5rem;
+    display: grid;
+    width : calc(100% - 26rem);
+    /* border: 1px solid var(--white);  */
+}
+
+.resultats {
+    margin :  0 1rem;
+    padding : 0 1rem;
+    /* border: 1px solid var(--white); */
+}
+
+.resultats__title {
+    width : 100%;
+    height : 2rem;
+    border-bottom: 1px solid var(--white);
+    text-align: center;
+   
+}
+
+/** resultat__view **/
+.resultat__view {
+    border: 1px solid var(--white);
+    background-color: var(--black);
+    border-radius: 0.5rem;
+    margin : 1rem 0;
+    padding : 1rem;
+    cursor: pointer;
+}
+
+.resultat__title {
+    /* border: 1px solid var(--white); */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    height: 2rem;
+}
+
+.resultat__owner {
+    font-size: 1.15rem;
+}
+
+.resultat__price {
+    text-align : center;
+}
+
+.resultat__duree {
+    text-align: right;
+}
+
+.flight__timeline {
+    width : 100%;
+    height : 8px;
+    padding : 1rem 4.5rem;
+    
+}
+
+.flight__timeline > .line {
+    width : 100%;
+    height : 12px;
+    border: 4px solid  var(--white);
+    border-radius: 4px;
+    background-color: var(--white);
+    animation: timeline 0.25s linear;
+}
+
+@keyframes  timeline {
+    from { width : 0% }
+    to {width : 100% }
+}
+
+.flight__segments{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flight__timeline__dot {
+    margin : -2rem 0;
+    padding : 2.5rem 0;
+    width : 100;
+    /* border : 1px solid white; */
+    text-align: center;
+}
+
+.flight__timeline__dot > .dot {
+    margin : calc(-2.5rem - 6px) auto;
+    height: 24px;
+    width: 24px;
+    border: 4px solid  var(--white);
+    border-radius: 50%;
+    background-color: var(--chocolate);
+}
+
+.departure__airport {
+    font-size: 1.15rem;
+}
+
+.departure__datetime {
+    font-size: 1.15rem;
+}
+
+
+.flight__options {
+    font-size: 1.10rem;
+    border-top: 1px solid var(--white);
+}
+
+.options__details {
+    display: inline;
+    width : 10rem;
+    /* border : 1px solid var(--orange); */
+}
+
+.options__resume {
+    right: 3rem;
+    position : absolute;
+    display: inline;
+    width : 20rem;
+    text-align: right;
+    /* border : 1px solid var(--orange); */
+}
+
+.options__details__all {
+    padding : 1rem;
+}
+
+/** Modal edit passenger **/
+
+
+.modal__passenger__add {
+    position:fixed;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    z-index: 9000;
+}
+
+.modal__background {
+    opacity: 0.77;      
+    position:absolute;
+    top:0;
+    left:0;;
+    bottom:0;
+    right :0;
+    background-color: var(--black);
+    z-index: 9001;
+}
+
+.modal__passenger {
+    position:absolute;
+    display: block;
+    top : 20%;
+    bottom: 20%;
+    left : 20%;
+    right : 20%;
+
+    background-color: var(--chocolate);
+    opacity: 1;
+    z-index: 9002;
+    border-radius: 1rem;
+    /* margin : 1rem; */
+    padding : 1rem;
+    border : 1px solid var(--red);
+}
+
+.modal__title {
+    margin  : -1rem -1rem  -1rem -1rem;
+    padding : 0.25rem 1rem 0.25rem 1rem ;
+    border-radius: 1rem 1rem 0 0 ;   
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: var(--red);
+}
+
+.modal__content {
+    font-size:1.15rem;
+    margin  : 1rem 0rem 1rem -1rem;
+    background-color: var(--black);
+    width : calc(100% + 2rem);
+    height : calc(100% - 4px);
+    border-radius: 0 0 1rem 1rem  ;
+    padding : 0.25rem 1rem 0.25rem 1rem ;
+    display:flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    flex-direction:row;
+    padding : 2.5rem 0;
+    justify-content: space-around;
+}
+
+.passenger_profile {
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    flex-direction:column;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>New Station</title>
+</head>
+
+<body>
+
+    <div>
+
+        <a href="../ViewStations/index.html">
+            <button id='back_button'><img src="../imgs/backspace-fill.svg"
+                    alt="button to go back to stations list">Retour</button>
+        </a>
+        <fieldset>
+            <legend>New Station</legend>
+            <label for="stationName">Station Name</label>
+            <input type="text" name="stationName" value="">
+
+            <label for="iata">iata</label>
+            <input type="text" name="iata" value="">
+
+            <label for="icao">icao</label>
+            <input type="text" name="icao" value="">
+
+            <div class="box">
+                <div class="same_line">
+                    <label for="city">City</label>
+                    <a href="../ViewAddCRCC/index.html">
+                        <button><img src="../imgs/plus-circle.svg" alt="button to add something new"></button>
+                    </a>
+                    <a href="../ViewModifyCRCC/index.html">
+                        <button><img src="../imgs/pencil-fill.svg" alt="button to modify something"></button>
+                    </a>
+                </div>
+                <select name="city">
+                    <option>Melbourne</option>
+                    <option>Quebec</option>
+                    <option >Fort Pierce</option>
+                    <option>Nantes</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <div class="same_line">
+                    <label for="region">Region</label>
+                    <a href="../ViewAddCRCC/index.html">
+                        <button><img src="../imgs/plus-circle.svg" alt="button to add something new"></button>
+                    </a>
+                    <a href="../ViewModifyCRCC/index.html">
+                        <button><img src="../imgs/pencil-fill.svg" alt="button to modify something"></button>
+                    </a>
+                </div>
+                <select name="region">
+                    <option>Queensland</option>
+                    <option>Alberta</option>
+                    <option >Florida</option>
+                    <option>Loire Atlantique</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <div class="same_line">
+                    <label for="country">Country</label>
+                    <a href="../ViewAddCRCC/index.html">
+                        <button><img src="../imgs/plus-circle.svg" alt="button to add something new"></button>
+                    </a>
+                    <a href="../ViewModifyCRCC/index.html">
+                        <button><img src="../imgs/pencil-fill.svg" alt="button to modify something"></button>
+                    </a>
+                </div>
+                <select name="country">
+                    <option>Australia</option>
+                    <option>Canada</option>
+                    <option selected>USA</option>
+                    <option>France</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <div class="same_line">
+                    <label for="continent">Continent</label>
+                    <a href="../ViewAddCRCC/index.html">
+                        <button><img src="../imgs/plus-circle.svg" alt="button to add something new"></button>
+                    </a>
+                    <a href="../ViewModifyCRCC/index.html">
+                        <button><img src="../imgs/pencil-fill.svg" alt="button to modify something"></button>
+                    </a>
+                </div>
+                <select name="continent">
+                    <option>Australiasia</option>
+                    <option selected>North America</option>
+                    <option>Europe</option>
+                </select>
+            </div>
+
+            <label for="longitude">Longitude</label>
+            <input type="text" name="longitude" value="">
+
+            <label for="latitude">Latitude</label>
+            <input type="text" name="latitude" value="">
+
+            <label for="altitude">Altitude</label>
+            <input type="text" name="altitude" value="">
+
+        </fieldset>
+
+        <div class="same_line">
+            <div class="input_button">
+                <a href="../ViewAddSubmitConfirmStation/index.html">
+                    <input type="submit" value="Submit">
+                </a>
+            </div>
+            <div class="input_button">
+                <a href="../ViewDeleteConfirmStation/index.html">
+                    <input type="submit" id="danger" value="Delete">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

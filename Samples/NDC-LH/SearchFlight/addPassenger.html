@@ -1,0 +1,312 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="stylesheet" href='../assets/css/app.css'  type="text/css" media="screen" />
+            <link rel="stylesheet" href='../assets/css/style.css'  type="text/css" media="screen" />
+            <link rel="stylesheet" href='../assets/css/root.css'  type="text/css" media="screen" />
+            <link rel="stylesheet" href='../assets/css/main.css'  type="text/css" media="screen" />
+            <link rel="stylesheet" href='../assets/css/search_flight.css'  type="text/css" media="screen" />
+        </head>
+    <body >
+      
+        <div class='margin__standard'> <button >  Retour </button> </div>
+
+
+        <div id='add_passenger' class='modal__passenger__add'>
+            <div id='modal_background' class='modal__background'></div>
+            <div class='modal__passenger'>
+                <div class='modal__title'>
+                    Edition du passager
+                </div>
+                <div class='modal__content'>
+                    <div id='profile' class='passenger_profile'>
+                        <div class='input-standard'> 
+                            <select name="pets" id="pet-select">
+                                <option value="">--Please choose an option--</option>
+                                <option value="dog">Adulte</option>
+                                <option value="cat">Enfant </option>
+                                <option value="hamster" selected> Nourisson</option>
+                            </select>
+                        </div>
+                        <div class='input-standard'> <label>Nom </label> <input type='text' value='text' />  </div>
+                        <div class='input-standard'> <label>Prénom </label> <input type='text' value='text' />  </div>
+                        <div class='input-standard'> <label>Résident </label> <input type='text' value='text' />  </div>
+                        <div class='input-standard'> <label>Date de naissance </label> <input type='text' value='text' />  </div>
+                        <div class='input-standard'> <label>Rattaché à  </label> 
+                            <select name="adult" id="adult-select">
+                                <option value="dog"> xxxxxxx </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id='profile' class='passenger_profile'>
+                        <div class='input-standard'> 
+                            <select name="adult" id="adult-select">
+                                <option value="dog">Home</option>
+                                <option value="dog">Business</option>
+                            </select>
+                        </div>
+                        <div class='input-standard'> <label>Rue </label> <input type='text' value='123 STREET Billing' />  </div>
+                        <div class='input-standard'> <label>Code postal </label> <input type='text' value='33160' />  </div>
+                        <div class='input-standard'> <label>Ville </label> <input type='text' value='MIAMI' />  </div>
+                        <div class='input-standard'> <label>Département </label> <input type='text' value='FL' />  </div>
+                        <div class='input-standard'> <label>Pays </label> <input type='text' value='US' />  </div>
+                    </div>
+                    <div id='profile' class='passenger_profile'>
+                        <div class='input-standard'> 
+                            <select name="adult" id="adult-select">
+                                <option value="dog">Home</option>
+                                <option value="dog">Business</option>
+                            </select>
+                        </div>
+                        <div class='input-standard'> <label>Email </label> <input type='mail'  value='ftheret@coisi.fr' />  </div>
+                        <div class='input-standard'> <label>Mobile </label> <input type='phone' value='+336......' />  </div>
+                        <div class='input-standard'> <button class='bgk-green' style='width:150px' >Valider</button></div>
+                        <div class='input-standard'> <button   style='width:150px' >Annuler</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+        <div id='main' class='main__default'>
+            
+            <div id='passengers' class='main__passenger'> 
+
+                <div id='passenger' class='passengers__list'> 
+
+                    <div id='card_passenger' class='card brd-green card__passenger'>
+                        <div id='card_namepassenger' class='card__title bgk-green'>
+                            Nombre de passager(s) : 2
+                        </div>
+                        <div id='card_infos' class="card__content">
+                            <div id='card_ajouter' class="passenger__add">  &#128934; Ajouter un passager </div>
+                        </div>
+
+                    </div>
+                    
+                    <div id='card_passenger' class='card brd-red card__passenger' >
+                        <div id='card_namepassenger' class='card__title  bgk-red'>
+                            John DOE
+                        </div>
+                        <div id='card_infos' class="card__content">
+                            <div class='txt-orange' style='text-align:right'>Payeur </div>
+                            <div>Adulte</div>
+                            <div> ----------------------------------------------- </div>
+                            <div> 123 STREET Billing </div>
+                            <div> 33160 MIAMI </div>
+                            <div> FL </div>
+                            <div> ----------------------------------------------- </div>
+                            <div> &#64; ftheret@coisi.fr   </div>
+                            <div> &#128241; 0668xxxxxx   </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div id='card_passenger' class='card brd-red card__passenger'>
+                        <div id='card_namepassenger' class='card__title bgk-red'>
+                            Little DOE
+                        </div>
+                        <div id='card_infos' class="card__content">
+                            <div>Enfant </div>
+                            <div> ----------------------------------------------- </div>
+                            <div> Attaché à Mr. John DOE</div>
+                        </div>
+                        
+                    </div>
+                  
+                    
+
+                </div>
+                
+            </div>
+
+            <!-- Search -->
+            <div id='flex' class='search__flex'>
+
+            <div id='search' class='main__search'> 
+                    <div class='input-standard'> 
+                        <h4> Rechercher un vol</h4>
+                   </div>  
+
+                   <div class='input-standard'> 
+                       <label>Fournisseurs</label> 
+                        <select id="fournisseur">
+                            <option value="">Pas de préférences</option>
+                            <option value="dog" selected>Lufthanza</option>
+                            <option value="cat">Austrian</option>
+                            <option value="hamster" >LX</option>
+                            <option value="parrot">Brussel Airline</option>
+                        </select>
+                    </div>
+
+
+                    <div class='input-standard'> <label>Aéroport de départ </label> <input type='text' value='CDG' />  </div>
+                    <div class='input-standard'> <label>Aéroport d'arrivée </label> <input type='text' value='BER' />  </div>
+
+                    <div class='input-standard'> 
+                        <label>Date de départ </label>
+                        <div> <input type='date'/>  </div>
+                    </div>
+
+                    <div class='input-standard'> 
+                        <label>Après l'heure </label>
+                        <div> <input type='time'/>  </div>
+                    </div>
+
+                    <div class='input-standard'> 
+                        <label>Date de retour </label>
+                        <div> <input type='date'/>  </div>
+                    </div>
+
+                    <div class='input-standard'> 
+                        <label>Après l'heure</label>
+                        <div> <input type='time'/>  </div>
+                    </div>
+
+                    
+                    <div class='input-standard'> <label for='test1' aria-describedby="label"> Aller retour </label> 
+                        <div class='input-advanced'> 
+                            <input id='test1' type='checkbox' />  
+                            <label for='test1' aria-describedby="label"></label> 
+                        </div>
+                    </div>
+
+                    <div class=''> <button class='bgk-red'>Rechercher</button>
+
+                </div>
+           
+            </div>
+
+            <div id='resultat' class='main__resultat'>
+             
+                <div id='resultats' class='resultats'>
+                    <div id='resultats-title' class='resultats__title'>
+                       <h4> Resultat des recherches (10) </h4>
+                    </div>
+                    <br/>
+                    <div class='input-standard'> 
+                        <label id='max-value' class='txt-blue' style='text-align: center; width: 100%;' for=''>1062.16€</label> 
+                        <div style='text-align: center; width: 100%;'>
+                            <span class='txt-orange'>193.16€</span>
+                            <input id='range_price' oninput="handleChange(this.value)" onchange='handleChange(this.value)' type='range'  min="193.16" max="1931.16" style='width:50%'/> 
+                            <span class='txt-red'>1931.16€</span>
+                        </div>
+                    </div>
+                    <br/>
+                    <!-- Offre 1-->
+                    <div id='result' class='resultat__view' data-id='0'> 
+                        <div id='title' class='resultat__title' style='padding-top : 0.5rem'>
+                            <div id='owner' class='resultat__owner'>Brussels Airlines (SN)</div>
+                            <div id='price' class='resultat__price'>965.8 €</div>
+                            <div id='duree' class='resultat__duree'>2h 00</div>
+                        </div>
+                        <div id='filghts' class='flight__view' style='padding-top : 1rem'> 
+                            <div id='segments' class='flight__timeline'><div class='line'></div></div>
+                            <div id='segments' class='flight__segments' style='padding-top : 1rem'>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='departure_ariport' class='departure__airport'>Brussels Airport, BE</div>
+                                    <div id='departure_datetime' class='departure__datetime'>2021-07-25 18:30</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='segment_during' class='segment__during'>2h 00</div>
+                                </div>
+                             
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='arrival_ariport' class='departure__airport'>Barcelona Apt, ES</div>
+                                    <div id='arrival_datetime' class='departure__datetime'>2021-07-25 20:30</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                    <!-- Offre 2-->
+                    <div id='result' class='resultat__view' data-id='0'> 
+                        <div id='title' class='resultat__title' style='padding-top : 0.5rem'>
+                            <div id='owner' class='resultat__owner'>Brussels Airlines (SN)</div>
+                            <div id='price' class='resultat__price'>965.8 €</div>
+                            <div id='duree' class='resultat__duree'>6h 00</div>
+                        </div>
+                        <div id='filghts' class='flight__view' style='padding-top : 1rem'> 
+                            <div id='segments' class='flight__timeline'><div class='line'></div></div>
+                            <div id='segments' class='flight__segments' style='padding-top : 1rem'>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='departure_ariport' class='departure__airport'>Brussels Airport, BE</div>
+                                    <div id='departure_datetime' class='departure__datetime'>2021-07-25 18:30</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='segment_during' class='segment__during'>4h 00</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='arrival_ariport' class='departure__airport'>Barcelona Apt, ES</div>
+                                    <div id='arrival_datetime' class='departure__datetime'>2021-07-25 20:30</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='segment_during' class='segment__during'>2h 00</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='arrival_ariport' class='departure__airport'>Barcelona Apt, ES</div>
+                                    <div id='arrival_datetime' class='departure__datetime'>2021-07-25 20:30</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Offre 3-->
+                    <div id='result' class='resultat__view' data-id='0'> 
+                        <div id='title' class='resultat__title' style='padding-top : 0.5rem'>
+                            <div id='owner' class='resultat__owner'>Brussels Airlines (SN)</div>
+                            <div id='price' class='resultat__price'>965.8 €</div>
+                            <div id='duree' class='resultat__duree'>4h 00</div>
+                        </div>
+                        <div id='flights' class='flight__view' style='padding-top : 1rem'> 
+                            <div id='segments' class='flight__timeline'><div class='line'></div></div>
+                            <div id='segments' class='flight__segments' style='padding-top : 1rem'>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='departure_ariport' class='departure__airport'>Brussels Airport, BE</div>
+                                    <div id='departure_datetime' class='departure__datetime'>2021-07-25 18:30</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='segment_during' class='segment__during'>2h 00</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='arrival_ariport' class='departure__airport'>Barcelona Apt, ES</div>
+                                    <div id='arrival_datetime' class='departure__datetime'>2021-07-25 20:30</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='segment_during' class='segment__during'>2h 00</div>
+                                </div>
+                                <div id='segment' class='flight__segment'>
+                                    <div id='dot' class='flight__timeline__dot'><div class='dot'></div></div>
+                                    <div id='arrival_ariport' class='departure__airport'>Barcelona Apt, ES</div>
+                                    <div id='arrival_datetime' class='departure__datetime'>2021-07-25 20:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+
+<script>
+    function handleChange(value) {
+          document.getElementById('max-value').innerHTML=`${value} €`; 
+        }
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,61 @@
+{
+ "Version": "ContextObj-0.1.0",
+ "Context": {
+  "ComponentName": "OrderViewChange",
+  "ClassName": "OrderView",
+  "fkFlow": "FL-8a7d-55e7-b1e3",
+  "IndexComponent": 2,
+  "libpath": "NDC-LH",
+  "XMLQuery": "",
+  "frags": {},
+  "TransactionControl": {
+   "tc": {
+    "app": {
+     "version": "7.6.0",
+     "language": "fr-FR",
+     "string": "SOAP"
+    },
+    "iden": {
+     "u": "ftherets2020",
+     "p": "aH2XhW98AFhtgHg4v",
+     "pseudocity": "ASRR",
+     "agt": "9LJG2020",
+     "agtpwd": "K6e2DjSQPvph",
+     "agtrole": "Ticketing Agent",
+     "agy": "00110795"
+    },
+    "agent": {
+     "user": "xmlscn001"
+    },
+    "trace": {
+     "string": "xmluser01"
+    },
+    "script": {
+     "engine": "FLXDM",
+     "name": "voyagexpertlhg-dispatch.flxdm"
+    }
+   }
+  },
+  "TransactionIdentifier": "ORVI-8EEE-4F18-B95A",
+  "Sections": {
+   "Version": "17.2",
+   "Party": "",
+   "TransactionIdentifier": "ORVI-8EEE-4F18-B95A"
+  },
+  "ErrorMessage": "",
+  "DataIn": {},
+  "Cache": {
+   "JSONQuery": {},
+   "XMLQuery": "",
+   "XMLResponse": "",
+   "JSONResponse": {}
+  },
+  "DataOut": {},
+  "Agency": {
+   "PseudoCity": "ASRR",
+   "AgencyID": "00110795"
+  },
+  "Vars": {},
+  "Version": "17.2"
+ }
+}

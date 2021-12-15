@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Stations List</title>
+</head>
+
+<body>
+
+    <div>
+
+        <div class="same_line">
+            <button id='back_button'><img src="../imgs/backspace-fill.svg"
+                    alt="button to go back to stations list">Retour</button>
+            <a id="new_station" href="../ViewStationNew/index.html">
+                <button id='back_button'>
+                    <img src="../imgs/plus-circle.svg" alt="button to go back to stations list">New
+                </button>
+            </a>
+        </div>
+
+        <fieldset>
+            <legend>Search via...</legend>
+            <div class="same_line">
+                <div>\
+                    <input type="radio" id="id" name="search-via" value="id">
+                    <label for="id">id</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="station_name" name="search-via" value="station_name">
+                    <label for="station_name">station_name</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="iata" name="search-via" value="iata">
+                    <label for="iata">iata</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="icao" name="search-via" value="icao">
+                    <label for="icao">icao</label>
+                </div>
+            </div>
+    
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in an id">
+        </fieldset>
+
+        <table class="stations_list" id="myTable">
+            <tr>
+                <th>id</th>
+                <th>station_name</th>
+                <th>iata</th>
+                <th>icao</th>
+            </tr>
+            <tr onclick='window.location.href="../ViewStationEdit/index.html"'>
+                <td>A1</td>
+                <td>Treasure Coast Airpark</td>
+                <td>FRP</td>
+                <td>empty</td>
+            </tr>
+            <tr onclick='window.location.href="../ViewStationEdit/index.html"'>
+                <td>A2</td>
+                <td>Port Moresby Jacksons International Airport</td>
+                <td>POM</td>
+                <td>empty</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>
